@@ -33,3 +33,23 @@ afterEach(() => {
   reducedMotion = false
   vi.useRealTimers()
 })
+
+// Any console.error/warn fails the test: React warnings can't scroll by unnoticed
+const consoleMessages: string[] = []
+
+beforeEach(() => {
+  consoleMessages.length = 0
+  for (const level of ['error', 'warn'] as const) {
+    vi.spyOn(console, level).mockImplementation((...args: unknown[]) => {
+      consoleMessages.push(`console.${level}: ${args.map(String).join(' ')}`)
+    })
+  }
+})
+
+afterEach(() => {
+  vi.mocked(console.error).mockRestore()
+  vi.mocked(console.warn).mockRestore()
+  if (consoleMessages.length > 0) {
+    throw new Error(`Unexpected console output:\n${consoleMessages.join('\n')}`)
+  }
+})

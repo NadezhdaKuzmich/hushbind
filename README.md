@@ -1,8 +1,12 @@
 # Hushbind
 
+[![CI](https://github.com/NadezhdaKuzmich/hushbind/actions/workflows/ci.yml/badge.svg)](https://github.com/NadezhdaKuzmich/hushbind/actions/workflows/ci.yml)
+
+**Live demo:** https://nadezhdakuzmich.github.io/hushbind/
+
 An anti-voice-clone authenticator for people who trust each other: family, friends, colleagues.
-Each pair shares a secret; both phones show the same 6-digit code that changes every 30 seconds.
-When a call sounds urgent, ask for the code.
+Each pair shares a secret; on a suspicious call, the caller proves who they are with a 6-digit
+code that changes every 30 seconds.
 
 > **Status:** stage 0, landing page with a live demo. An open-source pet project, not a commercial
 > product. Accounts (passkeys) arrive in stage 2; the iOS app is in development and won’t be
