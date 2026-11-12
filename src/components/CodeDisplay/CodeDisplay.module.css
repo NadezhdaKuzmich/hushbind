@@ -1,0 +1,81 @@
+.display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--color-accent-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-accent-soft);
+}
+
+.code {
+  font-family: var(--font-mono);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+.lg .code {
+  font-size: clamp(36px, 6vw, 48px);
+}
+
+.timer {
+  position: relative;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+}
+
+.ring {
+  position: absolute;
+  inset: 0;
+  transform: rotate(-90deg);
+}
+
+.track,
+.progress {
+  fill: none;
+  stroke-width: 4;
+}
+
+.track {
+  stroke: var(--color-border-strong);
+}
+
+.progress {
+  stroke: var(--color-accent);
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.seconds {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-soft);
+}
+
+.warning {
+  border-color: var(--color-warning-border);
+  background: var(--color-warning-soft);
+}
+
+.warning .code {
+  color: var(--color-warning-text);
+}
+
+.warning .progress {
+  stroke: var(--color-warning);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress {
+    transition: none;
+  }
+}

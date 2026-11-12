@@ -1,0 +1,311 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2026-11-11 12:31+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
+
+#: src/features/landing/TryIt.tsx:25
+msgid "“Hi, it’s me. Can you send me the bank details for the rent?”"
+msgstr "“Hi, it’s me. Can you send me the bank details for the rent?”"
+
+#: src/features/landing/TryIt.tsx:21
+msgid "“Mom, it’s me. I crashed the car, I need money right now. Please don’t tell Dad.”"
+msgstr "“Mom, it’s me. I crashed the car, I need money right now. Please don’t tell Dad.”"
+
+#: src/features/landing/TryIt.tsx:29
+msgid "“Sure. What’s our code?”"
+msgstr "“Sure. What’s our code?”"
+
+#. placeholder {0}: String(i + 1)
+#. placeholder {1}: String(count)
+#. placeholder {2}: slide.title
+#: src/components/Carousel/Carousel.tsx:167
+msgid "{0} of {1}: {2}"
+msgstr "{0} of {1}: {2}"
+
+#: src/features/landing/LiveCode.tsx:16
+msgid "{secondsLeft, plural, one {Changes in # second} other {Changes in # seconds}}"
+msgstr "{secondsLeft, plural, one {Changes in # second} other {Changes in # seconds}}"
+
+#: src/features/landing/WhyItWorks.tsx:17
+msgid "A cloned voice copies how someone sounds. It can’t copy a secret that lives only on two phones."
+msgstr "A cloned voice copies how someone sounds. It can’t copy a secret that lives only on two phones."
+
+#: src/features/landing/Hero.tsx:26
+msgid "A voice can be cloned. <0>A shared secret can’t.</0>"
+msgstr "A voice can be cloned. <0>A shared secret can’t.</0>"
+
+#: src/features/landing/Privacy.tsx:30
+msgid "Accounts use passkeys — no email, no phone number, no password. The server stores only encrypted data it can’t read."
+msgstr "Accounts use passkeys — no email, no phone number, no password. The server stores only encrypted data it can’t read."
+
+#: src/features/landing/FinalCta.tsx:20
+msgid "Agree on a code before the call comes"
+msgstr "Agree on a code before the call comes"
+
+#: src/layout/SiteFooter.tsx:12
+msgid "An open-source pet project, not a commercial product."
+msgstr "An open-source pet project, not a commercial product."
+
+#: src/features/landing/HowItWorks.tsx:61
+msgid "Ask for the code"
+msgstr "Ask for the code"
+
+#: src/features/landing/Privacy.tsx:45
+msgid "Backups are end-to-end encrypted with a key only you hold."
+msgstr "Backups are end-to-end encrypted with a key only you hold."
+
+#: src/features/landing/HowItWorks.tsx:52
+msgid "Both phones compute the same 6-digit code from the secret and the current time. No network needed, works in airplane mode."
+msgstr "Both phones compute the same 6-digit code from the secret and the current time. No network needed, works in airplane mode."
+
+#: src/features/landing/WhyItWorks.tsx:15
+msgid "Built on the same idea as bank 2FA"
+msgstr "Built on the same idea as bank 2FA"
+
+#: src/features/landing/TryIt.tsx:81
+msgid "Call scenarios"
+msgstr "Call scenarios"
+
+#: src/components/Carousel/Carousel.tsx:72
+msgid "carousel"
+msgstr "carousel"
+
+#: src/features/landing/TryIt.tsx:47
+msgid "Code on your screen"
+msgstr "Code on your screen"
+
+#: src/features/landing/TryIt.tsx:37
+msgid "Code the caller says"
+msgstr "Code the caller says"
+
+#: src/features/landing/HowItWorks.tsx:49
+msgid "Codes change every 30 s"
+msgstr "Codes change every 30 s"
+
+#: src/features/landing/HowItWorks.tsx:51
+msgid "Codes change every 30 seconds"
+msgstr "Codes change every 30 seconds"
+
+#: src/features/landing/TryIt.tsx:51
+msgid "Codes differ. Hang up and call back on the number you know."
+msgstr "Codes differ. Hang up and call back on the number you know."
+
+#: src/features/landing/TryIt.tsx:53
+msgid "Codes match. It’s really them."
+msgstr "Codes match. It’s really them."
+
+#: src/features/landing/HowItWorks.tsx:73
+#: src/features/landing/HowItWorks.tsx:75
+msgid "Compare and decide"
+msgstr "Compare and decide"
+
+#: src/features/landing/Privacy.tsx:39
+msgid "Family secrets are created on your phones and never sent to a server."
+msgstr "Family secrets are created on your phones and never sent to a server."
+
+#: src/features/landing/FinalCta.tsx:40
+msgid "Follow on GitHub"
+msgstr "Follow on GitHub"
+
+#: src/features/landing/HowItWorks.tsx:90
+msgid "Four steps, one minute to set up"
+msgstr "Four steps, one minute to set up"
+
+#: src/features/landing/WhyItWorks.tsx:54
+msgid "Honest limits"
+msgstr "Honest limits"
+
+#: src/features/landing/HowItWorks.tsx:92
+msgid "How Hushbind works"
+msgstr "How Hushbind works"
+
+#: src/features/landing/Hero.tsx:42
+#: src/features/landing/HowItWorks.tsx:89
+#: src/layout/SiteHeader.tsx:25
+msgid "How it works"
+msgstr "How it works"
+
+#: src/features/landing/FinalCta.tsx:23
+msgid "Hushbind is an open-source pet project in active development. The web version comes first; an iOS app is being built and tested, not yet in the App Store."
+msgstr "Hushbind is an open-source pet project in active development. The web version comes first; an iOS app is being built and tested, not yet in the App Store."
+
+#: src/features/landing/WhyItWorks.tsx:56
+msgid "It protects only if you ask. If the scammer has your relative’s unlocked phone, no code can help."
+msgstr "It protects only if you ask. If the scammer has your relative’s unlocked phone, no code can help."
+
+#: src/layout/SiteHeader.tsx:23
+msgid "Main"
+msgstr "Main"
+
+#: src/features/landing/Hero.tsx:61
+msgid "Mom’s code for you"
+msgstr "Mom’s code for you"
+
+#: src/features/landing/Hero.tsx:59
+msgid "Mom’s phone"
+msgstr "Mom’s phone"
+
+#: src/components/Carousel/Carousel.tsx:134
+msgid "Next slide"
+msgstr "Next slide"
+
+#: src/features/landing/Privacy.tsx:48
+msgid "No trackers, no ads, no analytics. The code is open source."
+msgstr "No trackers, no ads, no analytics. The code is open source."
+
+#: src/features/landing/WhyItWorks.tsx:44
+msgid "Nothing to look up online"
+msgstr "Nothing to look up online"
+
+#: src/features/landing/WhyItWorks.tsx:34
+msgid "One secret per pair"
+msgstr "One secret per pair"
+
+#: src/features/landing/WhyItWorks.tsx:25
+msgid "Overheard? Useless in 30 s"
+msgstr "Overheard? Useless in 30 s"
+
+#: src/features/landing/HowItWorks.tsx:37
+#: src/features/landing/HowItWorks.tsx:39
+msgid "Pair once"
+msgstr "Pair once"
+
+#: src/features/landing/Hero.tsx:19
+msgid "Pet project · iOS app in development"
+msgstr "Pet project · iOS app in development"
+
+#: src/components/Carousel/Carousel.tsx:123
+msgid "Previous slide"
+msgstr "Previous slide"
+
+#: src/layout/SiteHeader.tsx:31
+msgid "Privacy"
+msgstr "Privacy"
+
+#: src/features/landing/Privacy.tsx:27
+msgid "Privacy by design"
+msgstr "Privacy by design"
+
+#: src/features/landing/TryIt.tsx:84
+msgid "Real call"
+msgstr "Real call"
+
+#: src/features/landing/FinalCta.tsx:17
+msgid "Registration opens in the next stage"
+msgstr "Registration opens in the next stage"
+
+#: src/features/landing/HowItWorks.tsx:76
+msgid "Same code — it’s them. Different code or excuses — hang up and call back on the number you already know."
+msgstr "Same code — it’s them. Different code or excuses — hang up and call back on the number you already know."
+
+#: src/features/landing/TryIt.tsx:72
+msgid "Same voice. Different code."
+msgstr "Same voice. Different code."
+
+#: src/features/landing/Hero.tsx:31
+msgid "Scammers need only a few seconds of audio to sound exactly like your son or mom. Hushbind gives every pair of people who trust each other a secret 6-digit code that changes every 30 seconds. Ask for it — and know who is really calling."
+msgstr "Scammers need only a few seconds of audio to sound exactly like your son or mom. Hushbind gives every pair of people who trust each other a secret 6-digit code that changes every 30 seconds. Ask for it — and know who is really calling."
+
+#: src/features/landing/HowItWorks.tsx:40
+msgid "Scan each other’s QR code in person, or pair remotely and confirm a short check number by voice. Your phones agree on a secret that never travels over the internet."
+msgstr "Scan each other’s QR code in person, or pair remotely and confirm a short check number by voice. Your phones agree on a secret that never travels over the internet."
+
+#: src/features/landing/WhyItWorks.tsx:46
+msgid "Security questions leak through social media. A random secret can’t be guessed from your photos."
+msgstr "Security questions leak through social media. A random secret can’t be guessed from your photos."
+
+#: src/features/landing/Privacy.tsx:42
+msgid "Sign in with Face ID, Touch ID or your device PIN through passkeys."
+msgstr "Sign in with Face ID, Touch ID or your device PIN through passkeys."
+
+#: src/layout/SiteHeader.tsx:16
+msgid "Skip to content"
+msgstr "Skip to content"
+
+#: src/components/Carousel/Carousel.tsx:166
+msgid "slide"
+msgstr "slide"
+
+#. placeholder {0}: String(i + 1)
+#. placeholder {1}: slide.title
+#: src/components/Carousel/Carousel.tsx:108
+msgid "Slide {0}: {1}"
+msgstr "Slide {0}: {1}"
+
+#: src/features/landing/HowItWorks.tsx:63
+msgid "Something feels off? Ask"
+msgstr "Something feels off? Ask"
+
+#: src/layout/SiteFooter.tsx:16
+msgid "Source code"
+msgstr "Source code"
+
+#: src/components/Carousel/Carousel.tsx:94
+msgid "Start automatic slide show"
+msgstr "Start automatic slide show"
+
+#: src/components/Carousel/Carousel.tsx:94
+msgid "Stop automatic slide show"
+msgstr "Stop automatic slide show"
+
+#: src/features/landing/TryIt.tsx:33
+msgid "The caller says"
+msgstr "The caller says"
+
+#: src/features/landing/TryIt.tsx:74
+msgid "These codes are computed live in your browser, exactly like the app will. Switch the scenario and watch them change every 30 seconds."
+msgstr "These codes are computed live in your browser, exactly like the app will. Switch the scenario and watch them change every 30 seconds."
+
+#: src/features/landing/TryIt.tsx:71
+msgid "Try it"
+msgstr "Try it"
+
+#: src/features/landing/Hero.tsx:39
+#: src/layout/SiteHeader.tsx:35
+msgid "Try the demo"
+msgstr "Try the demo"
+
+#: src/features/landing/FinalCta.tsx:30
+msgid "Try the demo again"
+msgstr "Try the demo again"
+
+#: src/features/landing/WhyItWorks.tsx:27
+msgid "Unlike a fixed family password, a leaked code expires before anyone can reuse it."
+msgstr "Unlike a fixed family password, a leaked code expires before anyone can reuse it."
+
+#: src/features/landing/HowItWorks.tsx:64
+msgid "Urgent money, secrecy, a new number — classic scam signs. Ask the caller: “What’s our code?” A real relative opens the app and reads it."
+msgstr "Urgent money, secrecy, a new number — classic scam signs. Ask the caller: “What’s our code?” A real relative opens the app and reads it."
+
+#: src/features/landing/TryIt.tsx:85
+msgid "Voice-clone scam"
+msgstr "Voice-clone scam"
+
+#: src/features/landing/Privacy.tsx:28
+msgid "We can’t leak what we never have"
+msgstr "We can’t leak what we never have"
+
+#: src/features/landing/WhyItWorks.tsx:14
+#: src/layout/SiteHeader.tsx:28
+msgid "Why it works"
+msgstr "Why it works"
+
+#: src/features/landing/WhyItWorks.tsx:36
+msgid "You and Mom share one code, you and your brother another. One lost phone exposes one pair, not the whole family."
+msgstr "You and Mom share one code, you and your brother another. One lost phone exposes one pair, not the whole family."
+
+#: src/features/landing/Hero.tsx:52
+msgid "Your code for Mom"
+msgstr "Your code for Mom"
+
+#: src/features/landing/Hero.tsx:50
+msgid "Your phone"
+msgstr "Your phone"
+
+#: src/features/landing/TryIt.tsx:45
+msgid "Your screen"
+msgstr "Your screen"

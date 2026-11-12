@@ -1,0 +1,121 @@
+@keyframes fill {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.control {
+  display: inline-grid;
+  place-items: center;
+  width: var(--touch-target);
+  height: var(--touch-target);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  transition:
+    border-color var(--duration-fast) ease,
+    color var(--duration-fast) ease;
+}
+
+.control:hover {
+  border-color: var(--color-accent-border);
+  color: var(--color-accent);
+}
+
+.dots {
+  display: flex;
+  flex: 1;
+  gap: var(--space-2);
+}
+
+/* Visible bar is thin, the button itself is a full touch target */
+.dot {
+  position: relative;
+  flex: 1;
+  max-width: 96px;
+  height: var(--touch-target);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.dot::before {
+  content: '';
+  position: absolute;
+  inset: 50% 0 auto;
+  height: 4px;
+  margin-top: -2px;
+  border-radius: var(--radius-pill);
+  background: var(--color-border-strong);
+}
+
+.dotFill {
+  position: absolute;
+  inset: 50% 0 auto;
+  height: 4px;
+  margin-top: -2px;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.dot[aria-current='true'] .dotFill {
+  transform: scaleX(1);
+}
+
+.dot[aria-current='true'] .dotFill[data-running='true'] {
+  animation: fill var(--carousel-interval) linear;
+}
+
+.arrows {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.viewport {
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  touch-action: pan-y;
+}
+
+.track {
+  display: flex;
+  transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  transition: opacity var(--duration-slow) ease;
+}
+
+.slide[aria-hidden='true'] {
+  opacity: 0.25;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track,
+  .slide {
+    transition: none;
+  }
+}
