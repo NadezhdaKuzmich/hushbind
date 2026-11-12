@@ -96,10 +96,14 @@ Standards: [RFC 6238 TOTP](https://www.rfc-editor.org/rfc/rfc6238),
 [Carousel](https://www.w3.org/WAI/ARIA/apg/patterns/carousel/),
 [WCAG 2.2](https://www.w3.org/TR/WCAG22/).
 
+## Threat model
+
+What we defend against and how: [docs/threat-model.md](docs/threat-model.md).
+
 ## Roadmap
 
 0. **Landing + live demo** (this)
-1. Crypto core: pairing (ECDH + SAS), encrypted local vault
+1. Crypto core: pairing (ECDH + SAS), directional codes, encrypted local vault
 2. Accounts: passkeys, recovery key, zero-knowledge sync on Cloudflare Workers
 3. About page, onboarding, app screens
 4. Native iOS app (TestFlight / own devices)

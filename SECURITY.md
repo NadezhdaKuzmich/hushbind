@@ -25,6 +25,10 @@ user data. In scope:
 | Demo secrets are public                                    | They only drive the demo                | Real secrets are per pair, created on device (ECDH)       |
 | Safari may evict site storage after 7 days without a visit | WebKit storage policy                   | Ask users to add the app to the home screen; recovery key |
 
+## Threat model
+
+See [docs/threat-model.md](docs/threat-model.md).
+
 ## Design principles
 
 - Secrets are created on devices and are never sent to a server.

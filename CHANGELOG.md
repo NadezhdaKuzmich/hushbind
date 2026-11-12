@@ -7,6 +7,11 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follo
 
 ### Added
 
+- Threat model (`docs/threat-model.md`).
+- Crypto core for stage 1 (`src/lib/crypto`): ECDH P-256 pairing with hash commitment and
+  6-digit SAS, directional per-pair code keys (HKDF), verifier with attempt limit,
+  AES-GCM vault sealing.
+
 - Stage 0 project: Vite 8, React 19 with React Compiler, TypeScript strict, Lingui, CSS Modules
   with dark and light design tokens.
 - Landing page: hero with live codes, call-scenario demo (tabs), “How it works” carousel,
