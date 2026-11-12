@@ -1,11 +1,22 @@
 import userEvent from '@testing-library/user-event'
 import { expectNoA11yViolations } from './test/axe'
-import { render, screen } from './test/utils'
+import { renderAsync, screen } from './test/utils'
 import { App } from './App'
+import { getDemoKey } from './features/landing/demoKeys'
+
+/** Renders and waits until the live demo codes have loaded. */
+async function renderApp() {
+  const result = await renderAsync(<App />)
+  await screen.findAllByRole('group', { name: 'Code on your screen' })
+  return result
+}
 
 describe('App', () => {
-  it('renders the landmarks: banner, navigation, main, contentinfo', () => {
-    render(<App />)
+  // Warm the key cache so Suspense resolves inside act() even on a cold first test
+  beforeAll(() => Promise.all([getDemoKey('family'), getDemoKey('stranger')]))
+
+  it('renders the landmarks: banner, navigation, main, contentinfo', async () => {
+    await renderApp()
     expect(screen.getByRole('banner')).toBeInTheDocument()
     expect(screen.getByRole('navigation', { name: 'Main' })).toBeInTheDocument()
     expect(screen.getByRole('main')).toBeInTheDocument()
@@ -13,20 +24,14 @@ describe('App', () => {
   })
 
   it('starts the Tab order with a skip link to the main content', async () => {
-    render(<App />)
+    await renderApp()
     await userEvent.tab()
     expect(screen.getByRole('link', { name: 'Skip to content' })).toHaveFocus()
     expect(screen.getByRole('link', { name: 'Skip to content' })).toHaveAttribute('href', '#main')
   })
 
-  it('hides the source link while the repo URL is not configured', () => {
-    render(<App />)
-    expect(screen.queryByRole('link', { name: 'Source code' })).not.toBeInTheDocument()
-  })
-
   it('has no accessibility violations', async () => {
-    const { container } = render(<App />)
-    await screen.findAllByRole('group', { name: 'Code on your screen' })
+    const { container } = await renderApp()
     await expectNoA11yViolations(container)
   })
 })

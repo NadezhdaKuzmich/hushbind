@@ -1,4 +1,4 @@
-import { render, screen } from '../../test/utils'
+import { act, render, screen } from '../../test/utils'
 import { Reveal } from './Reveal'
 
 describe('Reveal', () => {
@@ -36,10 +36,10 @@ describe('Reveal', () => {
     const wrapper = screen.getByText('Hello').parentElement
     expect(wrapper).toHaveAttribute('data-visible', 'false')
     screen.getByText('Hello') // still in the DOM for screen readers
-    trigger(true)
-    return vi.waitFor(() => {
-      expect(wrapper).toHaveAttribute('data-visible', 'true')
-      vi.unstubAllGlobals()
+    act(() => {
+      trigger(true)
     })
+    expect(wrapper).toHaveAttribute('data-visible', 'true')
+    vi.unstubAllGlobals()
   })
 })

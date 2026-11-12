@@ -1,4 +1,4 @@
-import { act, renderHook } from '@testing-library/react'
+import { act, renderHook, waitFor } from '@testing-library/react'
 import { importSecret, totp } from '../lib/totp'
 import { useTotpCode } from './useTotpCode'
 
@@ -10,19 +10,23 @@ describe('useTotpCode', () => {
     expect(result.current.code).toBeNull()
   })
 
-  it('shows the code for the current window and counts down', async () => {
-    vi.useFakeTimers({
-      toFake: ['Date', 'setInterval', 'clearInterval', 'setTimeout', 'clearTimeout'],
-    })
-    vi.setSystemTime(new Date(60_000)) // T=60 s, start of a window
+  it('shows the code for the current window', async () => {
+    // Only the clock is fake: crypto resolves on real timers, and waitFor handles act()
+    vi.useFakeTimers({ toFake: ['Date'] })
+    vi.setSystemTime(new Date(60_000))
     const key = await importSecret(SECRET)
     const expected = await totp(key, 60)
 
     const { result } = renderHook(() => useTotpCode(key))
-    // vi.waitFor knows about fake timers, Testing Library's waitFor does not
-    await vi.waitFor(() => {
+    await waitFor(() => {
       expect(result.current.code).toBe(expected)
     })
+  })
+
+  it('counts down every second', () => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date(60_000))
+    const { result } = renderHook(() => useTotpCode(null))
     expect(result.current.secondsLeft).toBe(30)
 
     act(() => {
