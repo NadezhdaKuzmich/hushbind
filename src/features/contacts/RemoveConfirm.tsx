@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/react/macro'
-import { useEffect, useId, useRef, useState, useTransition } from 'react'
+import { useId, useLayoutEffect, useRef, useState, useTransition } from 'react'
 import { Button } from '../../components/Button'
 import type { Pair } from '../../lib/store'
 import { usePairsStore } from '../pairs'
@@ -21,7 +21,7 @@ export function RemoveConfirm({ pair, onCancel, onRemoved }: RemoveConfirmProps)
   const name = pair.name
 
   // Start on the safe choice: Enter right away cancels instead of deleting
-  useEffect(() => {
+  useLayoutEffect(() => {
     cancel.current?.focus()
   }, [])
 

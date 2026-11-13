@@ -1,5 +1,5 @@
 import { Trans, useLingui } from '@lingui/react/macro'
-import { useEffect, useRef, useState } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 import { Button } from '../../components/Button'
 import type { Pair } from '../../lib/store'
 import styles from './Contacts.module.css'
@@ -24,7 +24,8 @@ export function ContactItem({ pair, onRemoved }: ContactItemProps) {
   const returnFocusTo = useRef<'rename' | 'remove' | null>(null)
   const name = pair.name
 
-  useEffect(() => {
+  // Layout effect: focus moves in the same commit, never a moment on <body>
+  useLayoutEffect(() => {
     if (mode !== 'view' || !returnFocusTo.current) return
     const target = returnFocusTo.current === 'rename' ? renameButton : removeButton
     target.current?.focus()

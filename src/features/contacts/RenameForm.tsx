@@ -1,7 +1,7 @@
 import { Trans, useLingui } from '@lingui/react/macro'
 import {
-  useEffect,
   useId,
+  useLayoutEffect,
   useRef,
   useState,
   useTransition,
@@ -36,7 +36,7 @@ export function RenameForm({ pair, onDone }: RenameFormProps) {
 
   // Focus the field with the old name selected: typing replaces it
   // focus() explicitly: select() focuses in browsers, but the spec doesn't promise it
-  useEffect(() => {
+  useLayoutEffect(() => {
     input.current?.focus()
     input.current?.select()
   }, [])
