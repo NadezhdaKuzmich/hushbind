@@ -13,4 +13,4 @@ export type { InitiatorState, PairingResult, PairingRole, ResponderState } from 
 export { generateVaultKey, open, seal } from './vault'
 export type { Sealed } from './vault'
 export { createVerifier } from './verifier'
-export type { CheckResult, VerifierOptions } from './verifier'
+export type { CheckResult, Verifier, VerifierOptions } from './verifier'

@@ -26,18 +26,26 @@ msgstr "“Sure. What’s our code?”"
 msgid "{0} of {1}: {2}"
 msgstr "{0} of {1}: {2}"
 
+#: src/features/check/CallerCheck.tsx:113
+msgid "{minutes, plural, one {Checking is paused for # minute.} other {Checking is paused for # minutes.}}"
+msgstr "{minutes, plural, one {Checking is paused for # minute.} other {Checking is paused for # minutes.}}"
+
 #: src/features/contacts/ContactList.tsx:15
 msgid "{name} removed."
 msgstr "{name} removed."
 
 #: src/features/landing/LiveCode.tsx:16
-#: src/features/prove/ProvePage.tsx:37
+#: src/features/prove/ProvePage.tsx:35
 msgid "{secondsLeft, plural, one {Changes in # second} other {Changes in # seconds}}"
 msgstr "{secondsLeft, plural, one {Changes in # second} other {Changes in # seconds}}"
 
 #: src/features/landing/WhyItWorks.tsx:17
 msgid "A cloned voice copies how someone sounds. It can’t copy a secret that lives only on two phones."
 msgstr "A cloned voice copies how someone sounds. It can’t copy a secret that lives only on two phones."
+
+#: src/features/check/CallerCheck.tsx:168
+msgid "A real {name} never refuses to read the code. “No time”, “the app is broken” — hang up and call them back on the number you know."
+msgstr "A real {name} never refuses to read the code. “No time”, “the app is broken” — hang up and call them back on the number you know."
 
 #: src/features/landing/Hero.tsx:26
 msgid "A voice can be cloned. <0>A shared secret can’t.</0>"
@@ -55,11 +63,16 @@ msgstr "Agree on a code before the call comes"
 msgid "An open-source pet project, not a commercial product."
 msgstr "An open-source pet project, not a commercial product."
 
+#: src/features/check/CallerCheck.tsx:136
+msgid "Ask {name} to read their code, then type what you hear."
+msgstr "Ask {name} to read their code, then type what you hear."
+
 #: src/features/landing/HowItWorks.tsx:61
 msgid "Ask for the code"
 msgstr "Ask for the code"
 
-#: src/features/prove/ProvePage.tsx:87
+#: src/features/check/CheckPage.tsx:24
+#: src/features/prove/ProvePage.tsx:71
 msgid "Back to contacts"
 msgstr "Back to contacts"
 
@@ -88,6 +101,30 @@ msgstr "Cancel"
 msgid "carousel"
 msgstr "carousel"
 
+#: src/features/check/CallerCheck.tsx:158
+msgid "Check"
+msgstr "Check"
+
+#: src/features/check/CheckPage.tsx:19
+msgid "Check a caller"
+msgstr "Check a caller"
+
+#: src/features/check/CallerCheck.tsx:94
+msgid "Check again"
+msgstr "Check again"
+
+#: src/features/contacts/ContactItem.tsx:70
+msgid "Check caller"
+msgstr "Check caller"
+
+#: src/features/contacts/ContactItem.tsx:68
+msgid "Check caller {name}"
+msgstr "Check caller {name}"
+
+#: src/features/check/CallerCheck.tsx:80
+msgid "Code matches"
+msgstr "Code matches"
+
 #: src/features/landing/TryIt.tsx:47
 msgid "Code on your screen"
 msgstr "Code on your screen"
@@ -95,6 +132,10 @@ msgstr "Code on your screen"
 #: src/features/landing/TryIt.tsx:37
 msgid "Code the caller says"
 msgstr "Code the caller says"
+
+#: src/features/check/CallerCheck.tsx:140
+msgid "Code you hear"
+msgstr "Code you hear"
 
 #: src/features/landing/HowItWorks.tsx:49
 msgid "Codes change every 30 s"
@@ -149,6 +190,10 @@ msgstr "Four steps, one minute to set up"
 msgid "Go to the home page"
 msgstr "Go to the home page"
 
+#: src/features/check/CallerCheck.tsx:108
+msgid "Hang up. Call {name} back on the number you know — not the one that called you."
+msgstr "Hang up. Call {name} back on the number you know — not the one that called you."
+
 #: src/features/landing/WhyItWorks.tsx:54
 msgid "Honest limits"
 msgstr "Honest limits"
@@ -167,7 +212,7 @@ msgstr "How it works"
 msgid "Hushbind is an open-source pet project in active development. The web version comes first; an iOS app is being built and tested, not yet in the App Store."
 msgstr "Hushbind is an open-source pet project in active development. The web version comes first; an iOS app is being built and tested, not yet in the App Store."
 
-#: src/features/prove/ProvePage.tsx:46
+#: src/features/prove/ProvePage.tsx:44
 msgid "If someone calls you and asks for your code, hang up and call {name} back yourself. Scammers ask for codes to pass them on."
 msgstr "If someone calls you and asks for your code, hang up and call {name} back yourself. Scammers ask for codes to pass them on."
 
@@ -191,11 +236,11 @@ msgstr "Mom’s code for you"
 msgid "Mom’s phone"
 msgstr "Mom’s phone"
 
-#: src/features/contacts/ContactItem.tsx:61
+#: src/features/contacts/ContactItem.tsx:63
 msgid "My code"
 msgstr "My code"
 
-#: src/features/contacts/ContactItem.tsx:59
+#: src/features/contacts/ContactItem.tsx:61
 msgid "My code for {name}"
 msgstr "My code for {name}"
 
@@ -227,7 +272,7 @@ msgstr "Nothing to look up online"
 msgid "One secret per pair"
 msgstr "One secret per pair"
 
-#: src/features/prove/ProvePage.tsx:43
+#: src/features/prove/ProvePage.tsx:41
 msgid "Only on a call you started"
 msgstr "Only on a call you started"
 
@@ -284,12 +329,12 @@ msgstr "Real call"
 msgid "Registration opens in the next stage"
 msgstr "Registration opens in the next stage"
 
-#: src/features/contacts/ContactItem.tsx:82
+#: src/features/contacts/ContactItem.tsx:95
 #: src/features/contacts/RemoveConfirm.tsx:53
 msgid "Remove"
 msgstr "Remove"
 
-#: src/features/contacts/ContactItem.tsx:77
+#: src/features/contacts/ContactItem.tsx:90
 msgid "Remove {name}"
 msgstr "Remove {name}"
 
@@ -297,11 +342,11 @@ msgstr "Remove {name}"
 msgid "Remove {name}? You won’t be able to check each other until you pair again in person."
 msgstr "Remove {name}? You won’t be able to check each other until you pair again in person."
 
-#: src/features/contacts/ContactItem.tsx:72
+#: src/features/contacts/ContactItem.tsx:84
 msgid "Rename"
 msgstr "Rename"
 
-#: src/features/contacts/ContactItem.tsx:67
+#: src/features/contacts/ContactItem.tsx:79
 msgid "Rename {name}"
 msgstr "Rename {name}"
 
@@ -371,6 +416,10 @@ msgstr "Stop automatic slide show"
 msgid "The caller says"
 msgstr "The caller says"
 
+#: src/features/check/CallerCheck.tsx:83
+msgid "The code came from {name}’s phone. If anything still feels wrong, hang up and call {name} back yourself."
+msgstr "The code came from {name}’s phone. If anything still feels wrong, hang up and call {name} back yourself."
+
 #: src/features/landing/TryIt.tsx:74
 msgid "These codes are computed live in your browser, exactly like the app will. Switch the scenario and watch them change every 30 seconds."
 msgstr "These codes are computed live in your browser, exactly like the app will. Switch the scenario and watch them change every 30 seconds."
@@ -379,9 +428,13 @@ msgstr "These codes are computed live in your browser, exactly like the app will
 msgid "This address doesn’t lead anywhere. The link may be old or mistyped."
 msgstr "This address doesn’t lead anywhere. The link may be old or mistyped."
 
-#: src/features/prove/ProvePage.tsx:61
+#: src/features/pairs/MissingContact.tsx:8
 msgid "This contact isn’t on this device. It may have been removed, or the link came from another phone."
 msgstr "This contact isn’t on this device. It may have been removed, or the link came from another phone."
+
+#: src/features/check/CallerCheck.tsx:105
+msgid "This is probably not {name}"
+msgstr "This is probably not {name}"
 
 #: src/features/pairs/VaultBoundary.tsx:36
 msgid "Try again"
@@ -399,6 +452,10 @@ msgstr "Try the demo"
 #: src/features/landing/FinalCta.tsx:30
 msgid "Try the demo again"
 msgstr "Try the demo again"
+
+#: src/features/check/CallerCheck.tsx:125
+msgid "Type the 6 digits you hear."
+msgstr "Type the 6 digits you hear."
 
 #: src/features/landing/WhyItWorks.tsx:27
 msgid "Unlike a fixed family password, a leaked code expires before anyone can reuse it."
@@ -425,15 +482,20 @@ msgstr "We can’t leak what we never have"
 msgid "Why it works"
 msgstr "Why it works"
 
+#. placeholder {0}: view.attemptsLeft
+#: src/features/check/CallerCheck.tsx:127
+msgid "Wrong code. {0, plural, one {# try left.} other {# tries left.}} Ask {name} to read it again, slowly."
+msgstr "Wrong code. {0, plural, one {# try left.} other {# tries left.}} Ask {name} to read it again, slowly."
+
 #: src/features/landing/WhyItWorks.tsx:36
 msgid "You and Mom share one code, you and your brother another. One lost phone exposes one pair, not the whole family."
 msgstr "You and Mom share one code, you and your brother another. One lost phone exposes one pair, not the whole family."
 
-#: src/features/prove/ProvePage.tsx:82
+#: src/features/prove/ProvePage.tsx:66
 msgid "Your code"
 msgstr "Your code"
 
-#: src/features/prove/ProvePage.tsx:35
+#: src/features/prove/ProvePage.tsx:33
 msgid "Your code for {name}"
 msgstr "Your code for {name}"
 

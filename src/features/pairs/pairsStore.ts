@@ -1,4 +1,10 @@
-import { deriveDirectionalKeys, type DirectionalKeys, type PairingResult } from '../../lib/crypto'
+import {
+  createVerifier,
+  deriveDirectionalKeys,
+  type DirectionalKeys,
+  type PairingResult,
+  type Verifier,
+} from '../../lib/crypto'
 import { pairSecretBytes, type Pair, type VaultStore } from '../../lib/store'
 
 /**
@@ -24,6 +30,11 @@ export interface PairsStore {
    * Same promise per pair, so `use()` can wait on it.
    */
   keysFor: (pair: Pair) => Promise<DirectionalKeys>
+  /**
+   * The caller check for a pair. One per pair for the whole session, so leaving the screen
+   * doesn't reset the attempt count or the lock. Synchronous: the key comes from `keysFor`.
+   */
+  verifierFor: (pairId: string, checkKey: CryptoKey) => Verifier
 }
 
 /**
@@ -37,6 +48,8 @@ export function createPairsStore(openVault: () => Promise<VaultStore>): PairsSto
   let failed = false
   const listeners = new Set<() => void>()
   const keys = new Map<string, Promise<DirectionalKeys>>()
+  // Not cleared by retry(): a lock must survive "Try again"
+  const verifiers = new Map<string, Verifier>()
 
   async function refresh(store: VaultStore) {
     pairs = await store.listPairs()
@@ -75,6 +88,15 @@ export function createPairsStore(openVault: () => Promise<VaultStore>): PairsSto
     return derived
   }
 
+  function verifierFor(pairId: string, checkKey: CryptoKey): Verifier {
+    let verifier = verifiers.get(pairId)
+    if (!verifier) {
+      verifier = createVerifier(checkKey)
+      verifiers.set(pairId, verifier)
+    }
+    return verifier
+  }
+
   async function change<T>(action: (store: VaultStore) => Promise<T>): Promise<T> {
     await load()
     if (!vault) throw new Error('Vault is not open')
@@ -99,7 +121,9 @@ export function createPairsStore(openVault: () => Promise<VaultStore>): PairsSto
       await change((store) => store.removePair(id))
       // A removed pair's keys must not outlive it in memory
       keys.delete(id)
+      verifiers.delete(id)
     },
     keysFor,
+    verifierFor,
   }
 }

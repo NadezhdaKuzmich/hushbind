@@ -27,3 +27,8 @@ export function usePairs(): readonly Pair[] {
   use(store.load())
   return useSyncExternalStore(store.subscribe, store.getSnapshot)
 }
+
+/** One pair by id, or `null` if it isn't on this device. Same suspending rules as `usePairs`. */
+export function usePair(pairId: string): Pair | null {
+  return usePairs().find((pair) => pair.id === pairId) ?? null
+}

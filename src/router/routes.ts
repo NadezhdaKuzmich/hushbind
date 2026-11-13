@@ -8,6 +8,8 @@ export type Route =
   | { name: 'contacts' }
   /** My code for one contact. `pairId` is the random id from the vault. */
   | { name: 'prove'; pairId: string }
+  /** Check a caller who claims to be this contact. */
+  | { name: 'check'; pairId: string }
   | { name: 'notFound'; path: string }
 
 /** App routes start with `#/`. Anything else (`#how`, `#main`) is a landing anchor. */
@@ -35,10 +37,11 @@ export function parseRoute(hash: string): Route {
       return { name: 'contacts' }
   }
 
-  // Routes with a parameter: /app/c/<pairId>/prove
+  // Routes with a parameter: /app/c/<pairId>/prove|check
   const [app, c, pairId, action, ...rest] = path.slice(1).split('/')
   if (app === 'app' && c === 'c' && pairId && PAIR_ID.test(pairId) && rest.length === 0) {
     if (action === 'prove') return { name: 'prove', pairId }
+    if (action === 'check') return { name: 'check', pairId }
   }
   return { name: 'notFound', path }
 }
@@ -52,6 +55,8 @@ export function toHref(route: Route): string {
       return '#/app'
     case 'prove':
       return `#/app/c/${route.pairId}/prove`
+    case 'check':
+      return `#/app/c/${route.pairId}/check`
     case 'notFound':
       return `#${route.path}`
   }

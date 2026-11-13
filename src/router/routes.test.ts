@@ -12,6 +12,7 @@ describe('parseRoute', () => {
     ['#/app/c/aZ09_-/prove/', { name: 'prove', pairId: 'aZ09_-' }],
     ['#/app/c/a%20b/prove', { name: 'notFound', path: '/app/c/a%20b/prove' }],
     ['#/app/c/abc/prove/extra', { name: 'notFound', path: '/app/c/abc/prove/extra' }],
+    ['#/app/c/aZ09_-/check', { name: 'check', pairId: 'aZ09_-' }],
     ['#/app/c/abc/delete', { name: 'notFound', path: '/app/c/abc/delete' }],
     ['#/app/c//prove', { name: 'notFound', path: '/app/c//prove' }],
     ['#/nope', { name: 'notFound', path: '/nope' }],
@@ -27,6 +28,7 @@ describe('toHref', () => {
     { name: 'landing', anchor: 'try' },
     { name: 'contacts' },
     { name: 'prove', pairId: 'aZ09_-' },
+    { name: 'check', pairId: 'aZ09_-' },
     { name: 'notFound', path: '/nope' },
   ])('round-trips %o', (route) => {
     expect(parseRoute(toHref(route))).toEqual(route)

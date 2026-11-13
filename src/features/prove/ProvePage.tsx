@@ -7,7 +7,7 @@ import { useWakeLock } from '../../hooks/useWakeLock'
 import { AppPage } from '../../layout'
 import type { Pair } from '../../lib/store'
 import { toHref } from '../../router'
-import { usePairs, usePairsStore, VaultBoundary } from '../pairs'
+import { MissingContact, usePair, usePairsStore, VaultBoundary } from '../pairs'
 import styles from './ProvePage.module.css'
 
 const contactsHref = toHref({ name: 'contacts' })
@@ -51,22 +51,8 @@ function LiveProveCode({ pair }: { pair: Pair }) {
   )
 }
 
-/** The contact may have been removed, or the link is from another device. */
-function MissingContact() {
-  return (
-    <div className={styles.missing}>
-      <p className={styles.lead}>
-        <Trans>
-          This contact isn’t on this device. It may have been removed, or the link came from another
-          phone.
-        </Trans>
-      </p>
-    </div>
-  )
-}
-
 function ProveContent({ pairId }: { pairId: string }) {
-  const pair = usePairs().find((candidate) => candidate.id === pairId)
+  const pair = usePair(pairId)
   return pair ? <LiveProveCode pair={pair} /> : <MissingContact />
 }
 

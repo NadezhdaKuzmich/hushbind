@@ -55,35 +55,47 @@ export function ContactItem({ pair, onRemoved }: ContactItemProps) {
 
       {mode === 'view' && (
         <div className={styles.actions}>
-          <ButtonLink
-            href={toHref({ name: 'prove', pairId: pair.id })}
-            aria-label={t`My code for ${name}`}
-          >
-            <Trans>My code</Trans>
-          </ButtonLink>
+          {/* Call actions first; managing the contact is secondary */}
+          <div className={styles.group}>
+            <ButtonLink
+              href={toHref({ name: 'prove', pairId: pair.id })}
+              aria-label={t`My code for ${name}`}
+            >
+              <Trans>My code</Trans>
+            </ButtonLink>
+            <ButtonLink
+              href={toHref({ name: 'check', pairId: pair.id })}
+              variant="secondary"
+              aria-label={t`Check caller ${name}`}
+            >
+              <Trans>Check caller</Trans>
+            </ButtonLink>
+          </div>
           {/* Visible "Rename" + name for screen readers: many identical buttons are confusing */}
-          <Button
-            ref={renameButton}
-            variant="ghost"
-            className={styles.compact}
-            aria-label={t`Rename ${name}`}
-            onClick={() => {
-              setMode('rename')
-            }}
-          >
-            <Trans>Rename</Trans>
-          </Button>
-          <Button
-            ref={removeButton}
-            variant="ghost"
-            className={styles.compact}
-            aria-label={t`Remove ${name}`}
-            onClick={() => {
-              setMode('remove')
-            }}
-          >
-            <Trans>Remove</Trans>
-          </Button>
+          <div className={styles.group}>
+            <Button
+              ref={renameButton}
+              variant="ghost"
+              className={styles.compact}
+              aria-label={t`Rename ${name}`}
+              onClick={() => {
+                setMode('rename')
+              }}
+            >
+              <Trans>Rename</Trans>
+            </Button>
+            <Button
+              ref={removeButton}
+              variant="ghost"
+              className={styles.compact}
+              aria-label={t`Remove ${name}`}
+              onClick={() => {
+                setMode('remove')
+              }}
+            >
+              <Trans>Remove</Trans>
+            </Button>
+          </div>
         </div>
       )}
       {mode === 'rename' && (

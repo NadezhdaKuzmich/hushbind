@@ -74,6 +74,20 @@ describe('createPairsStore', () => {
     expect(store.keysFor(mom)).not.toBe(keys)
   })
 
+  it('keeps one verifier per pair, also across retry()', async () => {
+    const store = createPairsStore(openFreshVault)
+    const mom = await store.add('Mom', RESULT)
+    const { checkKey } = await store.keysFor(mom)
+    const verifier = store.verifierFor(mom.id, checkKey)
+    expect(store.verifierFor(mom.id, checkKey)).toBe(verifier)
+
+    store.retry()
+    expect(store.verifierFor(mom.id, checkKey)).toBe(verifier)
+
+    await store.remove(mom.id)
+    expect(store.verifierFor(mom.id, checkKey)).not.toBe(verifier)
+  })
+
   it('ignores retry() when nothing failed', async () => {
     const store = createPairsStore(openFreshVault)
     const loaded = store.load()
