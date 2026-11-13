@@ -14,6 +14,8 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follo
 - Encrypted on-device store (`src/lib/store`): IndexedDB via idb, non-extractable vault key,
   pairs kept only inside the sealed vault.
 - Tests fail on any `console.error`/`console.warn`.
+- Hash routing (`src/router`): typed routes, `#/app` contacts screen (placeholder), not-found
+  page, focus and scroll handling on navigation, app screens lazy-loaded.
 
 - Stage 0 project: Vite 8, React 19 with React Compiler, TypeScript strict, Lingui, CSS Modules
   with dark and light design tokens.

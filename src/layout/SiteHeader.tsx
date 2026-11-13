@@ -1,8 +1,19 @@
 import { Trans, useLingui } from '@lingui/react/macro'
+import type { MouseEvent } from 'react'
 import { ButtonLink } from '../components/Button'
 import { Icon } from '../components/Icon'
 import { APP_NAME } from '../config'
+import { MAIN_ID } from '../router'
 import styles from './SiteHeader.module.css'
+
+/**
+ * Moves focus to `<main>` without touching the URL.
+ * A plain `#main` link would change the hash, and with hash routing that is a navigation.
+ */
+function skipToContent(event: MouseEvent<HTMLAnchorElement>) {
+  event.preventDefault()
+  document.getElementById(MAIN_ID)?.focus()
+}
 
 /**
  * Top bar: skip link, logo, in-page navigation, main call to action.
@@ -12,7 +23,7 @@ export function SiteHeader() {
   const { t } = useLingui()
   return (
     <header className={styles.header}>
-      <a href="#main" className={styles.skip}>
+      <a href={`#${MAIN_ID}`} className={styles.skip} onClick={skipToContent}>
         <Trans>Skip to content</Trans>
       </a>
       <div className={styles.inner}>

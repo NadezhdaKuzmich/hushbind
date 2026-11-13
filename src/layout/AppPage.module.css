@@ -1,0 +1,24 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-5);
+  max-width: 720px;
+  min-height: 60vh;
+  margin: 0 auto;
+  padding: var(--space-18) var(--space-5) var(--space-22);
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(30px, 5vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.lead {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--color-text-soft);
+}

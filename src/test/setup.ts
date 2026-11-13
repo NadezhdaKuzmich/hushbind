@@ -28,10 +28,24 @@ Object.defineProperty(window, 'matchMedia', {
   },
 })
 
+// jsdom does no layout: scrolling is a no-op that tests can assert on
+const scrollIntoView = vi.fn<Element['scrollIntoView']>()
+// scrollTo is overloaded, a mock can't match its type: defineProperty skips the check
+const scrollTo = vi.fn<(...args: unknown[]) => void>()
+Element.prototype.scrollIntoView = scrollIntoView
+Object.defineProperty(window, 'scrollTo', { writable: true, value: scrollTo })
+
+/** The scroll mocks, so tests assert on them without pulling methods off objects. */
+export const scrollMocks = { scrollIntoView, scrollTo }
+
 afterEach(() => {
   cleanup()
   reducedMotion = false
   vi.useRealTimers()
+  scrollIntoView.mockClear()
+  scrollTo.mockClear()
+  // The URL lives on the shared window: a hash left by one test would route the next one
+  window.history.replaceState(null, '', '/')
 })
 
 // Any console.error/warn fails the test: React warnings can't scroll by unnoticed

@@ -54,6 +54,10 @@ msgstr "An open-source pet project, not a commercial product."
 msgid "Ask for the code"
 msgstr "Ask for the code"
 
+#: src/features/contacts/ContactsPage.tsx:15
+msgid "Back to the site"
+msgstr "Back to the site"
+
 #: src/features/landing/Privacy.tsx:45
 msgid "Backups are end-to-end encrypted with a key only you hold."
 msgstr "Backups are end-to-end encrypted with a key only you hold."
@@ -115,6 +119,10 @@ msgstr "Follow on GitHub"
 msgid "Four steps, one minute to set up"
 msgstr "Four steps, one minute to set up"
 
+#: src/features/not-found/NotFoundPage.tsx:15
+msgid "Go to the home page"
+msgstr "Go to the home page"
+
 #: src/features/landing/WhyItWorks.tsx:54
 msgid "Honest limits"
 msgstr "Honest limits"
@@ -125,7 +133,7 @@ msgstr "How Hushbind works"
 
 #: src/features/landing/Hero.tsx:42
 #: src/features/landing/HowItWorks.tsx:89
-#: src/layout/SiteHeader.tsx:25
+#: src/layout/SiteHeader.tsx:36
 msgid "How it works"
 msgstr "How it works"
 
@@ -137,7 +145,11 @@ msgstr "Hushbind is an open-source pet project in active development. The web ve
 msgid "It protects only if you ask. If the scammer has your relative’s unlocked phone, no code can help."
 msgstr "It protects only if you ask. If the scammer has your relative’s unlocked phone, no code can help."
 
-#: src/layout/SiteHeader.tsx:23
+#: src/layout/PageLoading.tsx:12
+msgid "Loading…"
+msgstr "Loading…"
+
+#: src/layout/SiteHeader.tsx:34
 msgid "Main"
 msgstr "Main"
 
@@ -149,9 +161,17 @@ msgstr "Mom’s code for you"
 msgid "Mom’s phone"
 msgstr "Mom’s phone"
 
+#: src/features/contacts/ContactsPage.tsx:11
+msgid "My contacts"
+msgstr "My contacts"
+
 #: src/components/Carousel/Carousel.tsx:134
 msgid "Next slide"
 msgstr "Next slide"
+
+#: src/features/contacts/ContactsPage.tsx:12
+msgid "No one here yet. Pairing with a person arrives in the next update."
+msgstr "No one here yet. Pairing with a person arrives in the next update."
 
 #: src/features/landing/Privacy.tsx:48
 msgid "No trackers, no ads, no analytics. The code is open source."
@@ -169,6 +189,10 @@ msgstr "One secret per pair"
 msgid "Overheard? Useless in 30 s"
 msgstr "Overheard? Useless in 30 s"
 
+#: src/features/not-found/NotFoundPage.tsx:11
+msgid "Page not found"
+msgstr "Page not found"
+
 #: src/features/landing/HowItWorks.tsx:37
 #: src/features/landing/HowItWorks.tsx:39
 msgid "Pair once"
@@ -182,7 +206,7 @@ msgstr "Pet project · iOS app in development"
 msgid "Previous slide"
 msgstr "Previous slide"
 
-#: src/layout/SiteHeader.tsx:31
+#: src/layout/SiteHeader.tsx:42
 msgid "Privacy"
 msgstr "Privacy"
 
@@ -222,7 +246,7 @@ msgstr "Security questions leak through social media. A random secret can’t be
 msgid "Sign in with Face ID, Touch ID or your device PIN through passkeys."
 msgstr "Sign in with Face ID, Touch ID or your device PIN through passkeys."
 
-#: src/layout/SiteHeader.tsx:16
+#: src/layout/SiteHeader.tsx:27
 msgid "Skip to content"
 msgstr "Skip to content"
 
@@ -260,12 +284,16 @@ msgstr "The caller says"
 msgid "These codes are computed live in your browser, exactly like the app will. Switch the scenario and watch them change every 30 seconds."
 msgstr "These codes are computed live in your browser, exactly like the app will. Switch the scenario and watch them change every 30 seconds."
 
+#: src/features/not-found/NotFoundPage.tsx:12
+msgid "This address doesn’t lead anywhere. The link may be old or mistyped."
+msgstr "This address doesn’t lead anywhere. The link may be old or mistyped."
+
 #: src/features/landing/TryIt.tsx:71
 msgid "Try it"
 msgstr "Try it"
 
 #: src/features/landing/Hero.tsx:39
-#: src/layout/SiteHeader.tsx:35
+#: src/layout/SiteHeader.tsx:46
 msgid "Try the demo"
 msgstr "Try the demo"
 
@@ -290,7 +318,7 @@ msgid "We can’t leak what we never have"
 msgstr "We can’t leak what we never have"
 
 #: src/features/landing/WhyItWorks.tsx:14
-#: src/layout/SiteHeader.tsx:28
+#: src/layout/SiteHeader.tsx:39
 msgid "Why it works"
 msgstr "Why it works"
 
