@@ -46,6 +46,8 @@ export default tseslint.config(
         },
       ],
       '@typescript-eslint/consistent-type-imports': 'error',
+      // A new member of a union (e.g. a Route) must be handled in every switch over it
+      '@typescript-eslint/switch-exhaustiveness-check': 'error',
     },
   },
   {

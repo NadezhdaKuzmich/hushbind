@@ -11,14 +11,21 @@ const ContactsPage = lazy(async () => {
   const { ContactsPage } = await import('./features/contacts')
   return { default: ContactsPage }
 })
+const ProvePage = lazy(async () => {
+  const { ProvePage } = await import('./features/prove')
+  return { default: ProvePage }
+})
 
-/** Route → screen. A new route without a case here is a type error. */
+/** Route → screen. A new route without a case here fails lint (switch-exhaustiveness-check). */
 function Screen({ route }: { route: Route }) {
   switch (route.name) {
     case 'landing':
       return <LandingPage />
     case 'contacts':
       return <ContactsPage />
+    case 'prove':
+      // key: another contact = a fresh screen, no state carried over from the previous one
+      return <ProvePage key={route.pairId} pairId={route.pairId} />
     case 'notFound':
       return <NotFoundPage />
   }

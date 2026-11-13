@@ -31,6 +31,7 @@ msgid "{name} removed."
 msgstr "{name} removed."
 
 #: src/features/landing/LiveCode.tsx:16
+#: src/features/prove/ProvePage.tsx:37
 msgid "{secondsLeft, plural, one {Changes in # second} other {Changes in # seconds}}"
 msgstr "{secondsLeft, plural, one {Changes in # second} other {Changes in # seconds}}"
 
@@ -57,6 +58,10 @@ msgstr "An open-source pet project, not a commercial product."
 #: src/features/landing/HowItWorks.tsx:61
 msgid "Ask for the code"
 msgstr "Ask for the code"
+
+#: src/features/prove/ProvePage.tsx:87
+msgid "Back to contacts"
+msgstr "Back to contacts"
 
 #: src/features/landing/Privacy.tsx:45
 msgid "Backups are end-to-end encrypted with a key only you hold."
@@ -116,7 +121,7 @@ msgstr "Compare and decide"
 msgid "Contacts"
 msgstr "Contacts"
 
-#: src/features/contacts/ContactsPage.tsx:30
+#: src/features/pairs/VaultBoundary.tsx:25
 msgid "Couldn’t open your contacts on this device. Private browsing or blocked site storage can cause this."
 msgstr "Couldn’t open your contacts on this device. Private browsing or blocked site storage can cause this."
 
@@ -162,6 +167,10 @@ msgstr "How it works"
 msgid "Hushbind is an open-source pet project in active development. The web version comes first; an iOS app is being built and tested, not yet in the App Store."
 msgstr "Hushbind is an open-source pet project in active development. The web version comes first; an iOS app is being built and tested, not yet in the App Store."
 
+#: src/features/prove/ProvePage.tsx:46
+msgid "If someone calls you and asks for your code, hang up and call {name} back yourself. Scammers ask for codes to pass them on."
+msgstr "If someone calls you and asks for your code, hang up and call {name} back yourself. Scammers ask for codes to pass them on."
+
 #: src/features/landing/WhyItWorks.tsx:56
 msgid "It protects only if you ask. If the scammer has your relative’s unlocked phone, no code can help."
 msgstr "It protects only if you ask. If the scammer has your relative’s unlocked phone, no code can help."
@@ -182,7 +191,15 @@ msgstr "Mom’s code for you"
 msgid "Mom’s phone"
 msgstr "Mom’s phone"
 
-#: src/features/contacts/ContactsPage.tsx:17
+#: src/features/contacts/ContactItem.tsx:61
+msgid "My code"
+msgstr "My code"
+
+#: src/features/contacts/ContactItem.tsx:59
+msgid "My code for {name}"
+msgstr "My code for {name}"
+
+#: src/features/contacts/ContactsPage.tsx:12
 msgid "My contacts"
 msgstr "My contacts"
 
@@ -210,7 +227,11 @@ msgstr "Nothing to look up online"
 msgid "One secret per pair"
 msgstr "One secret per pair"
 
-#: src/features/contacts/ContactsPage.tsx:49
+#: src/features/prove/ProvePage.tsx:43
+msgid "Only on a call you started"
+msgstr "Only on a call you started"
+
+#: src/features/pairs/VaultBoundary.tsx:45
 msgid "Opening your contacts…"
 msgstr "Opening your contacts…"
 
@@ -227,11 +248,11 @@ msgstr "Page not found"
 msgid "Pair once"
 msgstr "Pair once"
 
-#: src/features/contacts/ContactItem.tsx:48
+#: src/features/contacts/ContactItem.tsx:49
 msgid "Paired on <0>{pairedOn}</0>"
 msgstr "Paired on <0>{pairedOn}</0>"
 
-#: src/features/contacts/ContactsPage.tsx:19
+#: src/features/contacts/ContactsPage.tsx:14
 msgid "People you’ve paired with. Each pair has its own codes, and the secret never leaves this device."
 msgstr "People you’ve paired with. Each pair has its own codes, and the secret never leaves this device."
 
@@ -251,6 +272,10 @@ msgstr "Privacy"
 msgid "Privacy by design"
 msgstr "Privacy by design"
 
+#: src/features/prove/ProvePage.tsx:28
+msgid "Read this code to {name} when they ask. A new one appears every 30 seconds."
+msgstr "Read this code to {name} when they ask. A new one appears every 30 seconds."
+
 #: src/features/landing/TryIt.tsx:84
 msgid "Real call"
 msgstr "Real call"
@@ -259,12 +284,12 @@ msgstr "Real call"
 msgid "Registration opens in the next stage"
 msgstr "Registration opens in the next stage"
 
-#: src/features/contacts/ContactItem.tsx:75
+#: src/features/contacts/ContactItem.tsx:82
 #: src/features/contacts/RemoveConfirm.tsx:53
 msgid "Remove"
 msgstr "Remove"
 
-#: src/features/contacts/ContactItem.tsx:70
+#: src/features/contacts/ContactItem.tsx:77
 msgid "Remove {name}"
 msgstr "Remove {name}"
 
@@ -272,11 +297,11 @@ msgstr "Remove {name}"
 msgid "Remove {name}? You won’t be able to check each other until you pair again in person."
 msgstr "Remove {name}? You won’t be able to check each other until you pair again in person."
 
-#: src/features/contacts/ContactItem.tsx:65
+#: src/features/contacts/ContactItem.tsx:72
 msgid "Rename"
 msgstr "Rename"
 
-#: src/features/contacts/ContactItem.tsx:60
+#: src/features/contacts/ContactItem.tsx:67
 msgid "Rename {name}"
 msgstr "Rename {name}"
 
@@ -354,7 +379,11 @@ msgstr "These codes are computed live in your browser, exactly like the app will
 msgid "This address doesn’t lead anywhere. The link may be old or mistyped."
 msgstr "This address doesn’t lead anywhere. The link may be old or mistyped."
 
-#: src/features/contacts/ContactsPage.tsx:41
+#: src/features/prove/ProvePage.tsx:61
+msgid "This contact isn’t on this device. It may have been removed, or the link came from another phone."
+msgstr "This contact isn’t on this device. It may have been removed, or the link came from another phone."
+
+#: src/features/pairs/VaultBoundary.tsx:36
 msgid "Try again"
 msgstr "Try again"
 
@@ -399,6 +428,14 @@ msgstr "Why it works"
 #: src/features/landing/WhyItWorks.tsx:36
 msgid "You and Mom share one code, you and your brother another. One lost phone exposes one pair, not the whole family."
 msgstr "You and Mom share one code, you and your brother another. One lost phone exposes one pair, not the whole family."
+
+#: src/features/prove/ProvePage.tsx:82
+msgid "Your code"
+msgstr "Your code"
+
+#: src/features/prove/ProvePage.tsx:35
+msgid "Your code for {name}"
+msgstr "Your code for {name}"
 
 #: src/features/landing/Hero.tsx:52
 msgid "Your code for Mom"

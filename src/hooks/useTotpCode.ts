@@ -10,13 +10,19 @@ export interface TotpState {
 
 const nowSeconds = () => Date.now() / 1000
 
+/** A computed code remembers its key, so it is never shown for a different one. */
+interface Computed {
+  key: CryptoKey
+  code: string
+}
+
 /**
  * Live TOTP code for a key: ticks every second, recomputes only when the window changes.
  * The `cancelled` flag drops results that arrive after unmount or a key change.
  */
 export function useTotpCode(key: CryptoKey | null): TotpState {
   const [now, setNow] = useState(nowSeconds)
-  const [code, setCode] = useState<string | null>(null)
+  const [computed, setComputed] = useState<Computed | null>(null)
   const step = timeStep(now)
 
   useEffect(() => {
@@ -31,13 +37,15 @@ export function useTotpCode(key: CryptoKey | null): TotpState {
   useEffect(() => {
     if (!key) return
     let cancelled = false
-    void totp(key, step * PERIOD_SECONDS).then((next) => {
-      if (!cancelled) setCode(next)
+    void totp(key, step * PERIOD_SECONDS).then((code) => {
+      if (!cancelled) setComputed({ key, code })
     })
     return () => {
       cancelled = true
     }
   }, [key, step])
 
-  return { code: key ? code : null, secondsLeft: secondsRemaining(now) }
+  // After a key change the old code stays in state until the new one is ready: hide it
+  const code = key && computed?.key === key ? computed.code : null
+  return { code, secondsLeft: secondsRemaining(now) }
 }

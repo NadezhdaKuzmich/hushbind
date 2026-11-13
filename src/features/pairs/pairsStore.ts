@@ -1,5 +1,5 @@
-import type { PairingResult } from '../../lib/crypto'
-import type { Pair, VaultStore } from '../../lib/store'
+import { deriveDirectionalKeys, type DirectionalKeys, type PairingResult } from '../../lib/crypto'
+import { pairSecretBytes, type Pair, type VaultStore } from '../../lib/store'
 
 /**
  * The list of pairs for React: loads once, then pushes every change to subscribers.
@@ -11,7 +11,7 @@ export interface PairsStore {
    * so `use()` can wait on it without looping.
    */
   load: () => Promise<void>
-  /** Forgets a failed load, so the next `load()` tries again. For a "Try again" button. */
+  /** Forgets failures (load and keys), so the next call tries again. For a "Try again" button. */
   retry: () => void
   subscribe: (listener: () => void) => () => void
   /** Current list. The same array until something changes. */
@@ -19,6 +19,11 @@ export interface PairsStore {
   add: (name: string, result: PairingResult) => Promise<Pair>
   rename: (id: string, name: string) => Promise<void>
   remove: (id: string) => Promise<void>
+  /**
+   * Prove/check keys of a pair, derived once and kept in memory as non-extractable keys.
+   * Same promise per pair, so `use()` can wait on it.
+   */
+  keysFor: (pair: Pair) => Promise<DirectionalKeys>
 }
 
 /**
@@ -31,6 +36,7 @@ export function createPairsStore(openVault: () => Promise<VaultStore>): PairsSto
   let loading: Promise<void> | null = null
   let failed = false
   const listeners = new Set<() => void>()
+  const keys = new Map<string, Promise<DirectionalKeys>>()
 
   async function refresh(store: VaultStore) {
     pairs = await store.listPairs()
@@ -53,9 +59,20 @@ export function createPairsStore(openVault: () => Promise<VaultStore>): PairsSto
   }
 
   function retry() {
+    // Keys are cheap to derive again; dropping them also drops a failed derivation
+    keys.clear()
     if (!failed) return
     failed = false
     loading = null
+  }
+
+  function keysFor(pair: Pair): Promise<DirectionalKeys> {
+    let derived = keys.get(pair.id)
+    if (!derived) {
+      derived = deriveDirectionalKeys(pairSecretBytes(pair), pair.role)
+      keys.set(pair.id, derived)
+    }
+    return derived
   }
 
   async function change<T>(action: (store: VaultStore) => Promise<T>): Promise<T> {
@@ -78,6 +95,11 @@ export function createPairsStore(openVault: () => Promise<VaultStore>): PairsSto
     getSnapshot: () => pairs,
     add: (name, result) => change((store) => store.addPair(name, result)),
     rename: (id, name) => change((store) => store.renamePair(id, name)),
-    remove: (id) => change((store) => store.removePair(id)),
+    remove: async (id) => {
+      await change((store) => store.removePair(id))
+      // A removed pair's keys must not outlive it in memory
+      keys.delete(id)
+    },
+    keysFor,
   }
 }

@@ -1,7 +1,8 @@
 import { Trans, useLingui } from '@lingui/react/macro'
 import { useLayoutEffect, useRef, useState } from 'react'
-import { Button } from '../../components/Button'
+import { Button, ButtonLink } from '../../components/Button'
 import type { Pair } from '../../lib/store'
+import { toHref } from '../../router'
 import styles from './Contacts.module.css'
 import { RemoveConfirm } from './RemoveConfirm'
 import { RenameForm } from './RenameForm'
@@ -54,10 +55,17 @@ export function ContactItem({ pair, onRemoved }: ContactItemProps) {
 
       {mode === 'view' && (
         <div className={styles.actions}>
+          <ButtonLink
+            href={toHref({ name: 'prove', pairId: pair.id })}
+            aria-label={t`My code for ${name}`}
+          >
+            <Trans>My code</Trans>
+          </ButtonLink>
           {/* Visible "Rename" + name for screen readers: many identical buttons are confusing */}
           <Button
             ref={renameButton}
             variant="ghost"
+            className={styles.compact}
             aria-label={t`Rename ${name}`}
             onClick={() => {
               setMode('rename')
@@ -68,6 +76,7 @@ export function ContactItem({ pair, onRemoved }: ContactItemProps) {
           <Button
             ref={removeButton}
             variant="ghost"
+            className={styles.compact}
             aria-label={t`Remove ${name}`}
             onClick={() => {
               setMode('remove')

@@ -1,0 +1,32 @@
+.lead {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--color-text-soft);
+}
+
+.rule {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-5);
+  border: 1px solid var(--color-warning-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-warning-soft);
+}
+
+.ruleTitle {
+  margin: 0;
+  font-size: 17px;
+  color: var(--color-warning-text);
+}
+
+.ruleText {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.missing {
+  width: 100%;
+}

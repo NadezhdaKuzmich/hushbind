@@ -62,6 +62,18 @@ describe('createPairsStore', () => {
     expect(openVault).toHaveBeenCalledTimes(2)
   })
 
+  it('derives keys once per pair and forgets them on removal', async () => {
+    const store = createPairsStore(openFreshVault)
+    const mom = await store.add('Mom', RESULT)
+    const keys = store.keysFor(mom)
+    expect(store.keysFor(mom)).toBe(keys)
+    const { proveKey, checkKey } = await keys
+    expect(proveKey).not.toBe(checkKey)
+
+    await store.remove(mom.id)
+    expect(store.keysFor(mom)).not.toBe(keys)
+  })
+
   it('ignores retry() when nothing failed', async () => {
     const store = createPairsStore(openFreshVault)
     const loaded = store.load()

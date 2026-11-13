@@ -19,6 +19,9 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follo
 - Contacts screen: list from the encrypted vault, inline rename and remove with focus
   management, error state with retry, dev-only test contacts.
 - `ErrorBoundary` component; `Button` accepts `ref`.
+- “Your code” screen (`#/app/c/<id>/prove`): live prove code per contact, keeps the screen on
+  (Wake Lock), states the “only on a call you started” rule (threat model T3).
+- Lint rule `switch-exhaustiveness-check`.
 - Stage 0 project: Vite 8, React 19 with React Compiler, TypeScript strict, Lingui, CSS Modules
   with dark and light design tokens.
 - Landing page: hero with live codes, call-scenario demo (tabs), “How it works” carousel,
@@ -33,3 +36,4 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follo
 ### Fixed
 
 - Parallel vault changes could overwrite each other; writes now run one at a time.
+- `useTotpCode` could briefly show the previous key’s code after the key changed.

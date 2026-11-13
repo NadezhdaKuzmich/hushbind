@@ -6,10 +6,18 @@ export type Route =
   /** Marketing page. `anchor` is an in-page section like `how`, or null. */
   | { name: 'landing'; anchor: string | null }
   | { name: 'contacts' }
+  /** My code for one contact. `pairId` is the random id from the vault. */
+  | { name: 'prove'; pairId: string }
   | { name: 'notFound'; path: string }
 
 /** App routes start with `#/`. Anything else (`#how`, `#main`) is a landing anchor. */
 const ROUTE_PREFIX = '#/'
+
+/**
+ * Pair ids are base64url (see VaultStore). Anything else in that slot is a typo or a forged
+ * link, so it fails to parse instead of reaching the store.
+ */
+const PAIR_ID = /^[A-Za-z0-9_-]{1,64}$/
 
 /** Parses `location.hash`. Never throws: unknown input becomes `notFound`. */
 export function parseRoute(hash: string): Route {
@@ -25,9 +33,14 @@ export function parseRoute(hash: string): Route {
       return { name: 'landing', anchor: null }
     case '/app':
       return { name: 'contacts' }
-    default:
-      return { name: 'notFound', path }
   }
+
+  // Routes with a parameter: /app/c/<pairId>/prove
+  const [app, c, pairId, action, ...rest] = path.slice(1).split('/')
+  if (app === 'app' && c === 'c' && pairId && PAIR_ID.test(pairId) && rest.length === 0) {
+    if (action === 'prove') return { name: 'prove', pairId }
+  }
+  return { name: 'notFound', path }
 }
 
 /** Builds the `href` for a route. Use it instead of hand-written `#/...` strings. */
@@ -37,6 +50,8 @@ export function toHref(route: Route): string {
       return route.anchor ? `#${route.anchor}` : '#/'
     case 'contacts':
       return '#/app'
+    case 'prove':
+      return `#/app/c/${route.pairId}/prove`
     case 'notFound':
       return `#${route.path}`
   }
