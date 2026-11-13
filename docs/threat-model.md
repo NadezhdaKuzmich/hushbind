@@ -69,12 +69,12 @@ It does **not** detect deepfakes, block calls or verify phone numbers.
 
 ### Pairing (E1, E2)
 
-| ID  | Threat                                                        | Mitigation                                                                                                                                                | Status                         |
-| --- | ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| T8  | Man-in-the-middle during remote pairing swaps public keys     | ECDH P-256 + **hash commitment** + **6-digit SAS** compared by both people. The commitment stops a MITM from grinding keys until both SAS values collide. | ✅ core (`pairing.ts`), 🛠 1 UI |
-| T9  | Attacker MITMs pairing _and_ clones the voice reading the SAS | Recommend in-person QR pairing. For remote: compare the SAS on a video call or after calling back a known number; UI states this explicitly.              | 🛠 1                            |
-| T10 | Pairing invite link leaked or reused                          | Single use, expires in 10 min, carries only a public key, useless without the SAS                                                                         | 🛠 1                            |
-| T11 | Weak randomness                                               | Only `crypto.getRandomValues` and Web Crypto key generation                                                                                               | ✅                             |
+| ID  | Threat                                                        | Mitigation                                                                                                                                                | Status                                                                                                               |
+| --- | ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| T8  | Man-in-the-middle during remote pairing swaps public keys     | ECDH P-256 + **hash commitment** + **6-digit SAS** compared by both people. The commitment stops a MITM from grinding keys until both SAS values collide. | ✅ core (`pairing.ts`); SAS compare step in the on-device demo (`PairDemo`, with a simulated MITM); 🛠 1 real channel |
+| T9  | Attacker MITMs pairing _and_ clones the voice reading the SAS | Recommend in-person QR pairing. For remote: compare the SAS on a video call or after calling back a known number; UI states this explicitly.              | 🛠 1                                                                                                                  |
+| T10 | Pairing invite link leaked or reused                          | Single use, expires in 10 min, carries only a public key, useless without the SAS                                                                         | 🛠 1                                                                                                                  |
+| T11 | Weak randomness                                               | Only `crypto.getRandomValues` and Web Crypto key generation                                                                                               | ✅                                                                                                                   |
 
 ### Device (E3)
 

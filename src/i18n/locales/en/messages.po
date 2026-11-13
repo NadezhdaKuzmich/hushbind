@@ -59,6 +59,10 @@ msgstr "Accounts use passkeys — no email, no phone number, no password. The se
 msgid "Agree on a code before the call comes"
 msgstr "Agree on a code before the call comes"
 
+#: src/features/pair/PairDemo.tsx:148
+msgid "An attacker sits between the phones and swaps every message."
+msgstr "An attacker sits between the phones and swaps every message."
+
 #: src/layout/SiteFooter.tsx:12
 msgid "An open-source pet project, not a commercial product."
 msgstr "An open-source pet project, not a commercial product."
@@ -72,6 +76,7 @@ msgid "Ask for the code"
 msgstr "Ask for the code"
 
 #: src/features/check/CheckPage.tsx:24
+#: src/features/pair/PairPage.tsx:14
 #: src/features/prove/ProvePage.tsx:71
 msgid "Back to contacts"
 msgstr "Back to contacts"
@@ -121,6 +126,14 @@ msgstr "Check caller"
 msgid "Check caller {name}"
 msgstr "Check caller {name}"
 
+#: src/features/pair/PhoneCard.tsx:31
+msgid "Check number"
+msgstr "Check number"
+
+#: src/features/pair/PairDemo.tsx:242
+msgid "Checked that the revealed key matches the commitment, then worked out the shared secret."
+msgstr "Checked that the revealed key matches the commitment, then worked out the shared secret."
+
 #: src/features/check/CallerCheck.tsx:80
 msgid "Code matches"
 msgstr "Code matches"
@@ -153,6 +166,10 @@ msgstr "Codes differ. Hang up and call back on the number you know."
 msgid "Codes match. It’s really them."
 msgstr "Codes match. It’s really them."
 
+#: src/features/pair/PairDemo.tsx:164
+msgid "Commitment"
+msgstr "Commitment"
+
 #: src/features/landing/HowItWorks.tsx:73
 #: src/features/landing/HowItWorks.tsx:75
 msgid "Compare and decide"
@@ -171,8 +188,21 @@ msgid "Couldn’t remove. Try again."
 msgstr "Couldn’t remove. Try again."
 
 #: src/features/contacts/RenameForm.tsx:55
+#: src/features/pair/NameForm.tsx:37
 msgid "Couldn’t save. Try again."
 msgstr "Couldn’t save. Try again."
+
+#: src/features/pair/NameForm.tsx:66
+msgid "Demo phone A"
+msgstr "Demo phone A"
+
+#: src/features/pair/NameForm.tsx:54
+msgid "Demo phone B"
+msgstr "Demo phone B"
+
+#: src/features/pair/PairDemo.tsx:252
+msgid "Do the check numbers match?"
+msgstr "Do the check numbers match?"
 
 #: src/features/landing/Privacy.tsx:39
 msgid "Family secrets are created on your phones and never sent to a server."
@@ -186,9 +216,21 @@ msgstr "Follow on GitHub"
 msgid "Four steps, one minute to set up"
 msgstr "Four steps, one minute to set up"
 
+#: src/features/pair/PairDemo.tsx:359
+msgid "Go to contacts"
+msgstr "Go to contacts"
+
 #: src/features/not-found/NotFoundPage.tsx:15
 msgid "Go to the home page"
 msgstr "Go to the home page"
+
+#: src/features/pair/PairDemo.tsx:315
+msgid "Good catch. An attacker was in the middle: each phone paired with the attacker, not with the other phone. Nothing was saved."
+msgstr "Good catch. An attacker was in the middle: each phone paired with the attacker, not with the other phone. Nothing was saved."
+
+#: src/features/pair/PairDemo.tsx:208
+msgid "Got phone B’s key, worked out the shared secret and its check number. Now it reveals its own key."
+msgstr "Got phone B’s key, worked out the shared secret and its check number. Now it reveals its own key."
 
 #: src/features/check/CallerCheck.tsx:108
 msgid "Hang up. Call {name} back on the number you know — not the one that called you."
@@ -216,13 +258,31 @@ msgstr "Hushbind is an open-source pet project in active development. The web ve
 msgid "If someone calls you and asks for your code, hang up and call {name} back yourself. Scammers ask for codes to pass them on."
 msgstr "If someone calls you and asks for your code, hang up and call {name} back yourself. Scammers ask for codes to pass them on."
 
+#: src/features/pair/PairDemo.tsx:255
+msgid "In real life you compare them out loud or on video. The same number on both phones means no one is in the middle."
+msgstr "In real life you compare them out loud or on video. The same number on both phones means no one is in the middle."
+
 #: src/features/landing/WhyItWorks.tsx:56
 msgid "It protects only if you ask. If the scammer has your relative’s unlocked phone, no code can help."
 msgstr "It protects only if you ask. If the scammer has your relative’s unlocked phone, no code can help."
 
+#: src/features/pair/PairDemo.tsx:186
+msgid "Kept the commitment and made its own key pair."
+msgstr "Kept the commitment and made its own key pair."
+
 #: src/layout/PageLoading.tsx:12
 msgid "Loading…"
 msgstr "Loading…"
+
+#. placeholder {0}: formatCode(view.session.aResult.sas)
+#. placeholder {1}: formatCode(view.session.bResult.sas)
+#: src/features/pair/PairDemo.tsx:262
+msgid "Look again: {0} and {1} are different. Saving now would pair each phone with the attacker."
+msgstr "Look again: {0} and {1} are different. Saving now would pair each phone with the attacker."
+
+#: src/features/pair/PairDemo.tsx:159
+msgid "Made a key pair and a commitment: a hash of its public key. The key itself stays hidden for now."
+msgstr "Made a key pair and a commitment: a hash of its public key. The key itself stays hidden for now."
 
 #: src/layout/SiteHeader.tsx:34
 msgid "Main"
@@ -244,9 +304,13 @@ msgstr "My code"
 msgid "My code for {name}"
 msgstr "My code for {name}"
 
-#: src/features/contacts/ContactsPage.tsx:12
+#: src/features/contacts/ContactsPage.tsx:13
 msgid "My contacts"
 msgstr "My contacts"
+
+#: src/features/pair/PairDemo.tsx:299
+msgid "Name each other"
+msgstr "Name each other"
 
 #: src/features/contacts/RenameForm.tsx:69
 msgid "New name for {oldName}"
@@ -257,8 +321,8 @@ msgid "Next slide"
 msgstr "Next slide"
 
 #: src/features/contacts/ContactList.tsx:28
-msgid "No contacts yet. You add a person by pairing with them in person — that screen is coming soon."
-msgstr "No contacts yet. You add a person by pairing with them in person — that screen is coming soon."
+msgid "No contacts yet. Try pairing on this device to see how it works; pairing two phones arrives soon."
+msgstr "No contacts yet. Try pairing on this device to see how it works; pairing two phones arrives soon."
 
 #: src/features/landing/Privacy.tsx:48
 msgid "No trackers, no ads, no analytics. The code is open source."
@@ -267,6 +331,18 @@ msgstr "No trackers, no ads, no analytics. The code is open source."
 #: src/features/landing/WhyItWorks.tsx:44
 msgid "Nothing to look up online"
 msgstr "Nothing to look up online"
+
+#: src/features/pair/PairDemo.tsx:320
+msgid "Nothing was saved. If the numbers really differ, someone may be in the middle — pair again, side by side."
+msgstr "Nothing was saved. If the numbers really differ, someone may be in the middle — pair again, side by side."
+
+#: src/features/pair/NameForm.tsx:47
+msgid "On phone A, phone B is called"
+msgstr "On phone A, phone B is called"
+
+#: src/features/pair/NameForm.tsx:60
+msgid "On phone B, phone A is called"
+msgstr "On phone B, phone A is called"
 
 #: src/features/landing/WhyItWorks.tsx:34
 msgid "One secret per pair"
@@ -288,6 +364,10 @@ msgstr "Overheard? Useless in 30 s"
 msgid "Page not found"
 msgstr "Page not found"
 
+#: src/features/pair/PairDemo.tsx:362
+msgid "Pair again"
+msgstr "Pair again"
+
 #: src/features/landing/HowItWorks.tsx:37
 #: src/features/landing/HowItWorks.tsx:39
 msgid "Pair once"
@@ -297,13 +377,29 @@ msgstr "Pair once"
 msgid "Paired on <0>{pairedOn}</0>"
 msgstr "Paired on <0>{pairedOn}</0>"
 
-#: src/features/contacts/ContactsPage.tsx:14
+#: src/features/pair/PairDemo.tsx:335
+msgid "Pairing failed"
+msgstr "Pairing failed"
+
+#: src/features/pair/PairDemo.tsx:311
+msgid "Pairing stopped"
+msgstr "Pairing stopped"
+
+#: src/features/contacts/ContactsPage.tsx:15
 msgid "People you’ve paired with. Each pair has its own codes, and the secret never leaves this device."
 msgstr "People you’ve paired with. Each pair has its own codes, and the secret never leaves this device."
 
 #: src/features/landing/Hero.tsx:19
 msgid "Pet project · iOS app in development"
 msgstr "Pet project · iOS app in development"
+
+#: src/features/pair/PairDemo.tsx:96
+msgid "Phone A"
+msgstr "Phone A"
+
+#: src/features/pair/PairDemo.tsx:97
+msgid "Phone B"
+msgstr "Phone B"
 
 #: src/components/Carousel/Carousel.tsx:123
 msgid "Previous slide"
@@ -317,9 +413,22 @@ msgstr "Privacy"
 msgid "Privacy by design"
 msgstr "Privacy by design"
 
+#: src/features/pair/PairDemo.tsx:187
+#: src/features/pair/PairDemo.tsx:214
+msgid "Public key"
+msgstr "Public key"
+
+#: src/features/pair/PairDemo.tsx:127
+msgid "Put an attacker in the middle"
+msgstr "Put an attacker in the middle"
+
 #: src/features/prove/ProvePage.tsx:28
 msgid "Read this code to {name} when they ask. A new one appears every 30 seconds."
 msgstr "Read this code to {name} when they ask. A new one appears every 30 seconds."
+
+#: src/features/pair/PairDemo.tsx:236
+msgid "Ready."
+msgstr "Ready."
 
 #: src/features/landing/TryIt.tsx:84
 msgid "Real call"
@@ -362,6 +471,14 @@ msgstr "Same voice. Different code."
 msgid "Save"
 msgstr "Save"
 
+#: src/features/pair/NameForm.tsx:77
+msgid "Save both contacts"
+msgstr "Save both contacts"
+
+#: src/features/pair/PairDemo.tsx:349
+msgid "Saved two demo contacts"
+msgstr "Saved two demo contacts"
+
 #: src/features/contacts/RenameForm.tsx:91
 msgid "Saving…"
 msgstr "Saving…"
@@ -377,6 +494,15 @@ msgstr "Scan each other’s QR code in person, or pair remotely and confirm a sh
 #: src/features/landing/WhyItWorks.tsx:46
 msgid "Security questions leak through social media. A random secret can’t be guessed from your photos."
 msgstr "Security questions leak through social media. A random secret can’t be guessed from your photos."
+
+#: src/features/pair/PairDemo.tsx:196
+msgid "Send to phone A"
+msgstr "Send to phone A"
+
+#: src/features/pair/PairDemo.tsx:173
+#: src/features/pair/PairDemo.tsx:223
+msgid "Send to phone B"
+msgstr "Send to phone B"
 
 #: src/features/landing/Privacy.tsx:42
 msgid "Sign in with Face ID, Touch ID or your device PIN through passkeys."
@@ -400,13 +526,34 @@ msgstr "Slide {0}: {1}"
 msgid "Something feels off? Ask"
 msgstr "Something feels off? Ask"
 
+#: src/features/pair/PairDemo.tsx:338
+msgid "Something went wrong, and nothing was saved."
+msgstr "Something went wrong, and nothing was saved."
+
 #: src/layout/SiteFooter.tsx:16
 msgid "Source code"
 msgstr "Source code"
 
+#: src/features/pair/PairDemo.tsx:136
+msgid "Start"
+msgstr "Start"
+
+#: src/features/pair/PairDemo.tsx:327
+#: src/features/pair/PairDemo.tsx:341
+msgid "Start again"
+msgstr "Start again"
+
 #: src/components/Carousel/Carousel.tsx:94
 msgid "Start automatic slide show"
 msgstr "Start automatic slide show"
+
+#: src/features/pair/PairDemo.tsx:144
+msgid "Step {step} of 4"
+msgstr "Step {step} of 4"
+
+#: src/features/pair/PairDemo.tsx:106
+msgid "Step {step} of 4."
+msgstr "Step {step} of 4."
 
 #: src/components/Carousel/Carousel.tsx:94
 msgid "Stop automatic slide show"
@@ -423,6 +570,14 @@ msgstr "The code came from {name}’s phone. If anything still feels wrong, hang
 #: src/features/landing/TryIt.tsx:74
 msgid "These codes are computed live in your browser, exactly like the app will. Switch the scenario and watch them change every 30 seconds."
 msgstr "These codes are computed live in your browser, exactly like the app will. Switch the scenario and watch them change every 30 seconds."
+
+#: src/features/pair/PairDemo.tsx:289
+msgid "They don’t match"
+msgstr "They don’t match"
+
+#: src/features/pair/PairDemo.tsx:281
+msgid "They match"
+msgstr "They match"
 
 #: src/features/not-found/NotFoundPage.tsx:12
 msgid "This address doesn’t lead anywhere. The link may be old or mistyped."
@@ -444,6 +599,11 @@ msgstr "Try again"
 msgid "Try it"
 msgstr "Try it"
 
+#: src/features/contacts/ContactsPage.tsx:22
+#: src/features/pair/PairPage.tsx:11
+msgid "Try pairing"
+msgstr "Try pairing"
+
 #: src/features/landing/Hero.tsx:39
 #: src/layout/SiteHeader.tsx:46
 msgid "Try the demo"
@@ -452,6 +612,12 @@ msgstr "Try the demo"
 #: src/features/landing/FinalCta.tsx:30
 msgid "Try the demo again"
 msgstr "Try the demo again"
+
+#. placeholder {0}: view.nameOnA
+#. placeholder {1}: view.nameOnB
+#: src/features/pair/PairDemo.tsx:352
+msgid "Try them: open “My code” on “{0}” — that is what phone A reads out. Then open “Check caller” on “{1}” and type it in."
+msgstr "Try them: open “My code” on “{0}” — that is what phone A reads out. Then open “Check caller” on “{1}” and type it in."
 
 #: src/features/check/CallerCheck.tsx:125
 msgid "Type the 6 digits you hear."
@@ -465,6 +631,10 @@ msgstr "Unlike a fixed family password, a leaked code expires before anyone can 
 msgid "Urgent money, secrecy, a new number — classic scam signs. Ask the caller: “What’s our code?” A real relative opens the app and reads it."
 msgstr "Urgent money, secrecy, a new number — classic scam signs. Ask the caller: “What’s our code?” A real relative opens the app and reads it."
 
+#: src/features/pair/NameForm.tsx:36
+msgid "Use 1 to {MAX_NAME_LENGTH} characters for each name."
+msgstr "Use 1 to {MAX_NAME_LENGTH} characters for each name."
+
 #: src/features/contacts/RenameForm.tsx:54
 msgid "Use 1 to {MAX_NAME_LENGTH} characters."
 msgstr "Use 1 to {MAX_NAME_LENGTH} characters."
@@ -472,6 +642,19 @@ msgstr "Use 1 to {MAX_NAME_LENGTH} characters."
 #: src/features/landing/TryIt.tsx:85
 msgid "Voice-clone scam"
 msgstr "Voice-clone scam"
+
+#: src/features/pair/PairDemo.tsx:177
+#: src/features/pair/PairDemo.tsx:227
+msgid "Waiting for phone A."
+msgstr "Waiting for phone A."
+
+#: src/features/pair/PairDemo.tsx:183
+msgid "Waiting for phone B."
+msgstr "Waiting for phone B."
+
+#: src/features/pair/PairDemo.tsx:112
+msgid "Watch two phones pair, step by step, on this screen. You end up with two linked demo contacts to try “My code” and “Check caller”."
+msgstr "Watch two phones pair, step by step, on this screen. You end up with two linked demo contacts to try “My code” and “Check caller”."
 
 #: src/features/landing/Privacy.tsx:28
 msgid "We can’t leak what we never have"

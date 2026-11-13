@@ -118,11 +118,11 @@ describe('ContactsPage', () => {
     expect(await screen.findByText(/No contacts yet/)).toBeVisible()
   })
 
-  it('adds a test contact from the dev tools', async () => {
+  it('links to pairing', async () => {
     await renderContacts()
+    // Wait for the list too: a load still running would finish inside the next test
     await screen.findByText(/No contacts yet/)
-    await userEvent.click(screen.getByRole('button', { name: 'Add test contact' }))
-    expect(await screen.findByText('Test 1')).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'Try pairing' })).toHaveAttribute('href', '#/app/pair')
   })
 
   it('has no accessibility violations', async () => {

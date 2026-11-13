@@ -26,8 +26,8 @@ export function ContactList() {
       {pairs.length === 0 ? (
         <p className={styles.empty}>
           <Trans>
-            No contacts yet. You add a person by pairing with them in person — that screen is coming
-            soon.
+            No contacts yet. Try pairing on this device to see how it works; pairing two phones
+            arrives soon.
           </Trans>
         </p>
       ) : (

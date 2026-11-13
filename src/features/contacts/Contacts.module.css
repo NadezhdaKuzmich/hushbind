@@ -136,16 +136,3 @@
   color: var(--color-text-soft);
   line-height: 1.5;
 }
-
-.dev {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-3);
-  width: 100%;
-  margin-top: var(--space-6);
-  padding: var(--space-4);
-  border: 1px dashed var(--color-warning-border);
-  border-radius: var(--radius-md);
-}

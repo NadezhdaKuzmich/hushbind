@@ -6,6 +6,8 @@ export type Route =
   /** Marketing page. `anchor` is an in-page section like `how`, or null. */
   | { name: 'landing'; anchor: string | null }
   | { name: 'contacts' }
+  /** Pair with someone (for now: the on-device demo). */
+  | { name: 'pair' }
   /** My code for one contact. `pairId` is the random id from the vault. */
   | { name: 'prove'; pairId: string }
   /** Check a caller who claims to be this contact. */
@@ -35,6 +37,8 @@ export function parseRoute(hash: string): Route {
       return { name: 'landing', anchor: null }
     case '/app':
       return { name: 'contacts' }
+    case '/app/pair':
+      return { name: 'pair' }
   }
 
   // Routes with a parameter: /app/c/<pairId>/prove|check
@@ -53,6 +57,8 @@ export function toHref(route: Route): string {
       return route.anchor ? `#${route.anchor}` : '#/'
     case 'contacts':
       return '#/app'
+    case 'pair':
+      return '#/app/pair'
     case 'prove':
       return `#/app/c/${route.pairId}/prove`
     case 'check':

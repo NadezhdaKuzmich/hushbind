@@ -1,8 +1,9 @@
 import { Trans, useLingui } from '@lingui/react/macro'
+import { ButtonLink } from '../../components/Button'
 import { AppPage } from '../../layout'
+import { toHref } from '../../router'
 import { VaultBoundary } from '../pairs'
 import { ContactList } from './ContactList'
-import { DevTools } from './DevTools'
 
 /** Home screen of the app: people you are paired with. */
 export function ContactsPage() {
@@ -17,9 +18,11 @@ export function ContactsPage() {
         </Trans>
       }
     >
+      <ButtonLink href={toHref({ name: 'pair' })}>
+        <Trans>Try pairing</Trans>
+      </ButtonLink>
       <VaultBoundary>
         <ContactList />
-        {import.meta.env.DEV && <DevTools />}
       </VaultBoundary>
     </AppPage>
   )

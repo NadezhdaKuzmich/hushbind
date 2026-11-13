@@ -25,6 +25,8 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follo
 - “Check a caller” screen (`#/app/c/<id>/check`): type the code you hear, 3 tries, then a
   5-minute lock with “hang up and call back”; never shows a code (threat model T1, T2, T5).
 - Verifier: timed lock (`lockSeconds`) and `lockedUntil()`; one verifier per pair per session.
+- “Try pairing” (`#/app/pair`): the pairing protocol step by step on one device, with an optional
+  simulated man in the middle; saves two linked demo contacts. Replaces the dev-only test contacts.
 - Stage 0 project: Vite 8, React 19 with React Compiler, TypeScript strict, Lingui, CSS Modules
   with dark and light design tokens.
 - Landing page: hero with live codes, call-scenario demo (tabs), “How it works” carousel,

@@ -15,6 +15,10 @@ const ProvePage = lazy(async () => {
   const { ProvePage } = await import('./features/prove')
   return { default: ProvePage }
 })
+const PairPage = lazy(async () => {
+  const { PairPage } = await import('./features/pair')
+  return { default: PairPage }
+})
 const CheckPage = lazy(async () => {
   const { CheckPage } = await import('./features/check')
   return { default: CheckPage }
@@ -27,6 +31,8 @@ function Screen({ route }: { route: Route }) {
       return <LandingPage />
     case 'contacts':
       return <ContactsPage />
+    case 'pair':
+      return <PairPage />
     case 'prove':
       // key: another contact = a fresh screen, no state carried over from the previous one
       return <ProvePage key={route.pairId} pairId={route.pairId} />
