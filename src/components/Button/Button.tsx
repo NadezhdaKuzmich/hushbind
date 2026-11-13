@@ -1,4 +1,4 @@
-import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 import styles from './Button.module.css'
 
 export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'warning'
@@ -20,7 +20,8 @@ function classes(variant: ButtonVariant, size: ButtonSize, fullWidth: boolean, e
     .join(' ')
 }
 
-export type ButtonProps = StyleProps & Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children'>
+// ComponentProps includes `ref`: in React 19 it is a plain prop, no forwardRef needed
+export type ButtonProps = StyleProps & Omit<ComponentProps<'button'>, 'children'>
 
 /**
  * An action on the current page. For navigation use {@link ButtonLink}.
@@ -44,8 +45,7 @@ export function Button({
   )
 }
 
-export type ButtonLinkProps = StyleProps &
-  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'children'> & { href: string }
+export type ButtonLinkProps = StyleProps & Omit<ComponentProps<'a'>, 'children'> & { href: string }
 
 /**
  * Navigation that looks like a button. Renders a real `<a>`,

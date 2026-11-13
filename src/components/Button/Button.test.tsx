@@ -1,3 +1,4 @@
+import { createRef } from 'react'
 import { render, screen } from '../../test/utils'
 import userEvent from '@testing-library/user-event'
 import { expectNoA11yViolations } from '../../test/axe'
@@ -14,6 +15,12 @@ describe('Button', () => {
     render(<Button onClick={onClick}>Save</Button>)
     await userEvent.click(screen.getByRole('button', { name: 'Save' }))
     expect(onClick).toHaveBeenCalledOnce()
+  })
+
+  it('passes ref to the real button', () => {
+    const ref = createRef<HTMLButtonElement>()
+    render(<Button ref={ref}>Save</Button>)
+    expect(ref.current).toBe(screen.getByRole('button', { name: 'Save' }))
   })
 
   it('does not fire when disabled', async () => {

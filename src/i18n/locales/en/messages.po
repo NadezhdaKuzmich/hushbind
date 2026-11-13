@@ -26,6 +26,10 @@ msgstr "“Sure. What’s our code?”"
 msgid "{0} of {1}: {2}"
 msgstr "{0} of {1}: {2}"
 
+#: src/features/contacts/ContactList.tsx:15
+msgid "{name} removed."
+msgstr "{name} removed."
+
 #: src/features/landing/LiveCode.tsx:16
 msgid "{secondsLeft, plural, one {Changes in # second} other {Changes in # seconds}}"
 msgstr "{secondsLeft, plural, one {Changes in # second} other {Changes in # seconds}}"
@@ -54,10 +58,6 @@ msgstr "An open-source pet project, not a commercial product."
 msgid "Ask for the code"
 msgstr "Ask for the code"
 
-#: src/features/contacts/ContactsPage.tsx:15
-msgid "Back to the site"
-msgstr "Back to the site"
-
 #: src/features/landing/Privacy.tsx:45
 msgid "Backups are end-to-end encrypted with a key only you hold."
 msgstr "Backups are end-to-end encrypted with a key only you hold."
@@ -73,6 +73,11 @@ msgstr "Built on the same idea as bank 2FA"
 #: src/features/landing/TryIt.tsx:81
 msgid "Call scenarios"
 msgstr "Call scenarios"
+
+#: src/features/contacts/RemoveConfirm.tsx:56
+#: src/features/contacts/RenameForm.tsx:94
+msgid "Cancel"
+msgstr "Cancel"
 
 #: src/components/Carousel/Carousel.tsx:72
 msgid "carousel"
@@ -106,6 +111,22 @@ msgstr "Codes match. It’s really them."
 #: src/features/landing/HowItWorks.tsx:75
 msgid "Compare and decide"
 msgstr "Compare and decide"
+
+#: src/features/contacts/ContactList.tsx:21
+msgid "Contacts"
+msgstr "Contacts"
+
+#: src/features/contacts/ContactsPage.tsx:30
+msgid "Couldn’t open your contacts on this device. Private browsing or blocked site storage can cause this."
+msgstr "Couldn’t open your contacts on this device. Private browsing or blocked site storage can cause this."
+
+#: src/features/contacts/RemoveConfirm.tsx:48
+msgid "Couldn’t remove. Try again."
+msgstr "Couldn’t remove. Try again."
+
+#: src/features/contacts/RenameForm.tsx:55
+msgid "Couldn’t save. Try again."
+msgstr "Couldn’t save. Try again."
 
 #: src/features/landing/Privacy.tsx:39
 msgid "Family secrets are created on your phones and never sent to a server."
@@ -161,17 +182,21 @@ msgstr "Mom’s code for you"
 msgid "Mom’s phone"
 msgstr "Mom’s phone"
 
-#: src/features/contacts/ContactsPage.tsx:11
+#: src/features/contacts/ContactsPage.tsx:17
 msgid "My contacts"
 msgstr "My contacts"
+
+#: src/features/contacts/RenameForm.tsx:69
+msgid "New name for {oldName}"
+msgstr "New name for {oldName}"
 
 #: src/components/Carousel/Carousel.tsx:134
 msgid "Next slide"
 msgstr "Next slide"
 
-#: src/features/contacts/ContactsPage.tsx:12
-msgid "No one here yet. Pairing with a person arrives in the next update."
-msgstr "No one here yet. Pairing with a person arrives in the next update."
+#: src/features/contacts/ContactList.tsx:28
+msgid "No contacts yet. You add a person by pairing with them in person — that screen is coming soon."
+msgstr "No contacts yet. You add a person by pairing with them in person — that screen is coming soon."
 
 #: src/features/landing/Privacy.tsx:48
 msgid "No trackers, no ads, no analytics. The code is open source."
@@ -185,6 +210,10 @@ msgstr "Nothing to look up online"
 msgid "One secret per pair"
 msgstr "One secret per pair"
 
+#: src/features/contacts/ContactsPage.tsx:49
+msgid "Opening your contacts…"
+msgstr "Opening your contacts…"
+
 #: src/features/landing/WhyItWorks.tsx:25
 msgid "Overheard? Useless in 30 s"
 msgstr "Overheard? Useless in 30 s"
@@ -197,6 +226,14 @@ msgstr "Page not found"
 #: src/features/landing/HowItWorks.tsx:39
 msgid "Pair once"
 msgstr "Pair once"
+
+#: src/features/contacts/ContactItem.tsx:48
+msgid "Paired on <0>{pairedOn}</0>"
+msgstr "Paired on <0>{pairedOn}</0>"
+
+#: src/features/contacts/ContactsPage.tsx:19
+msgid "People you’ve paired with. Each pair has its own codes, and the secret never leaves this device."
+msgstr "People you’ve paired with. Each pair has its own codes, and the secret never leaves this device."
 
 #: src/features/landing/Hero.tsx:19
 msgid "Pet project · iOS app in development"
@@ -222,6 +259,27 @@ msgstr "Real call"
 msgid "Registration opens in the next stage"
 msgstr "Registration opens in the next stage"
 
+#: src/features/contacts/ContactItem.tsx:75
+#: src/features/contacts/RemoveConfirm.tsx:53
+msgid "Remove"
+msgstr "Remove"
+
+#: src/features/contacts/ContactItem.tsx:70
+msgid "Remove {name}"
+msgstr "Remove {name}"
+
+#: src/features/contacts/RemoveConfirm.tsx:42
+msgid "Remove {name}? You won’t be able to check each other until you pair again in person."
+msgstr "Remove {name}? You won’t be able to check each other until you pair again in person."
+
+#: src/features/contacts/ContactItem.tsx:65
+msgid "Rename"
+msgstr "Rename"
+
+#: src/features/contacts/ContactItem.tsx:60
+msgid "Rename {name}"
+msgstr "Rename {name}"
+
 #: src/features/landing/HowItWorks.tsx:76
 msgid "Same code — it’s them. Different code or excuses — hang up and call back on the number you already know."
 msgstr "Same code — it’s them. Different code or excuses — hang up and call back on the number you already know."
@@ -229,6 +287,14 @@ msgstr "Same code — it’s them. Different code or excuses — hang up and cal
 #: src/features/landing/TryIt.tsx:72
 msgid "Same voice. Different code."
 msgstr "Same voice. Different code."
+
+#: src/features/contacts/RenameForm.tsx:91
+msgid "Save"
+msgstr "Save"
+
+#: src/features/contacts/RenameForm.tsx:91
+msgid "Saving…"
+msgstr "Saving…"
 
 #: src/features/landing/Hero.tsx:31
 msgid "Scammers need only a few seconds of audio to sound exactly like your son or mom. Hushbind gives every pair of people who trust each other a secret 6-digit code that changes every 30 seconds. Ask for it — and know who is really calling."
@@ -288,6 +354,10 @@ msgstr "These codes are computed live in your browser, exactly like the app will
 msgid "This address doesn’t lead anywhere. The link may be old or mistyped."
 msgstr "This address doesn’t lead anywhere. The link may be old or mistyped."
 
+#: src/features/contacts/ContactsPage.tsx:41
+msgid "Try again"
+msgstr "Try again"
+
 #: src/features/landing/TryIt.tsx:71
 msgid "Try it"
 msgstr "Try it"
@@ -308,6 +378,10 @@ msgstr "Unlike a fixed family password, a leaked code expires before anyone can 
 #: src/features/landing/HowItWorks.tsx:64
 msgid "Urgent money, secrecy, a new number — classic scam signs. Ask the caller: “What’s our code?” A real relative opens the app and reads it."
 msgstr "Urgent money, secrecy, a new number — classic scam signs. Ask the caller: “What’s our code?” A real relative opens the app and reads it."
+
+#: src/features/contacts/RenameForm.tsx:54
+msgid "Use 1 to {MAX_NAME_LENGTH} characters."
+msgstr "Use 1 to {MAX_NAME_LENGTH} characters."
 
 #: src/features/landing/TryIt.tsx:85
 msgid "Voice-clone scam"

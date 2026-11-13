@@ -16,7 +16,9 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follo
 - Tests fail on any `console.error`/`console.warn`.
 - Hash routing (`src/router`): typed routes, `#/app` contacts screen (placeholder), not-found
   page, focus and scroll handling on navigation, app screens lazy-loaded.
-
+- Contacts screen: list from the encrypted vault, inline rename and remove with focus
+  management, error state with retry, dev-only test contacts.
+- `ErrorBoundary` component; `Button` accepts `ref`.
 - Stage 0 project: Vite 8, React 19 with React Compiler, TypeScript strict, Lingui, CSS Modules
   with dark and light design tokens.
 - Landing page: hero with live codes, call-scenario demo (tabs), “How it works” carousel,
@@ -27,3 +29,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follo
 - Tests: Vitest + Testing Library + axe (52 tests), Playwright E2E on desktop and mobile with
   WCAG checks in both themes.
 - GitHub Actions: lint, type-check, coverage, audit, E2E, GitHub Pages deploy. Renovate config.
+
+### Fixed
+
+- Parallel vault changes could overwrite each other; writes now run one at a time.

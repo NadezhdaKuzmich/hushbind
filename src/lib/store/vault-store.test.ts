@@ -1,4 +1,3 @@
-import 'fake-indexeddb/auto'
 import { bytesEqual, type PairingResult } from '../crypto'
 import { openDb } from './db'
 import { pairSecretBytes, VaultStore } from './vault-store'
@@ -46,6 +45,12 @@ describe('VaultStore', () => {
     expect(JSON.stringify(sealed)).not.toContain('Mom')
     const key = await db.get('keys', 'vault')
     expect(key?.extractable).toBe(false)
+  })
+
+  it('keeps every change when calls run in parallel', async () => {
+    const store = await VaultStore.open(await freshDb())
+    await Promise.all(['A', 'B', 'C'].map((name) => store.addPair(name, RESULT)))
+    expect((await store.listPairs()).map((pair) => pair.name).sort()).toEqual(['A', 'B', 'C'])
   })
 
   it('rejects empty and overlong names', async () => {

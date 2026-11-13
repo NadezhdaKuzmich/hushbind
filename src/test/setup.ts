@@ -1,4 +1,6 @@
 import '@testing-library/jest-dom/vitest'
+// jsdom has no IndexedDB; this in-memory one behaves like the browser's
+import 'fake-indexeddb/auto'
 import { i18n } from '@lingui/core'
 import { cleanup } from '@testing-library/react'
 
