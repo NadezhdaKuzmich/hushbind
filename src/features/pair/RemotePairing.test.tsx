@@ -153,6 +153,12 @@ describe('RemotePairing', () => {
     expect(await son.screen.findByRole('alert')).toHaveTextContent(/more than 10 minutes/)
   })
 
+  it('shows each outgoing message as a QR code too', async () => {
+    const son = renderOne('initiator')
+    await readMessage(son, 'Your invite')
+    expect(son.screen.getByRole('img', { name: 'QR code: Your invite' })).toBeInTheDocument()
+  })
+
   it('copies a message, and says so', async () => {
     const writeText = vi.fn(() => Promise.resolve())
     Object.defineProperty(navigator, 'clipboard', { value: { writeText }, configurable: true })

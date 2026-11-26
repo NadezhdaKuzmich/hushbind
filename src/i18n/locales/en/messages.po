@@ -199,15 +199,15 @@ msgstr "Contacts"
 msgid "Continue"
 msgstr "Continue"
 
-#: src/features/pair/MessageOut.tsx:52
+#: src/features/pair/MessageOut.tsx:66
 msgid "Copied."
 msgstr "Copied."
 
-#: src/features/pair/MessageOut.tsx:49
+#: src/features/pair/MessageOut.tsx:63
 msgid "Copy"
 msgstr "Copy"
 
-#: src/features/pair/MessageOut.tsx:53
+#: src/features/pair/MessageOut.tsx:67
 msgid "Couldn’t copy. Select the text and copy it."
 msgstr "Couldn’t copy. Select the text and copy it."
 
@@ -427,6 +427,10 @@ msgstr "Open Hushbind in a new tab"
 msgid "Opening your contacts…"
 msgstr "Opening your contacts…"
 
+#: src/features/pair/MessageOut.tsx:43
+msgid "Or copy the text and send it:"
+msgstr "Or copy the text and send it:"
+
 #: src/features/pair/PairPage.tsx:62
 msgid "Other ways to pair"
 msgstr "Other ways to pair"
@@ -514,6 +518,10 @@ msgstr "Public key"
 #: src/features/pair/PairDemo.tsx:127
 msgid "Put an attacker in the middle"
 msgstr "Put an attacker in the middle"
+
+#: src/features/pair/MessageOut.tsx:41
+msgid "QR code: {label}"
+msgstr "QR code: {label}"
 
 #: src/features/prove/ProvePage.tsx:28
 msgid "Read this code to {name} when they ask. A new one appears every 30 seconds."

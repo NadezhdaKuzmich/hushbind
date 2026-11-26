@@ -1,6 +1,8 @@
-import { Trans } from '@lingui/react/macro'
+import { Trans, useLingui } from '@lingui/react/macro'
 import { useId, useState } from 'react'
 import { Button } from '../../components/Button'
+import { QrCode } from '../../components/QrCode'
+import { useWakeLock } from '../../hooks/useWakeLock'
 import styles from './RemotePairing.module.css'
 
 export interface MessageOutProps {
@@ -10,10 +12,16 @@ export interface MessageOutProps {
   message: string
 }
 
-/** A pairing message to hand over: copy it (and, in the next step, show it as a QR code). */
+/**
+ * A pairing message to hand over: a QR code to scan side by side, or text to copy and send.
+ * The screen stays on while it's shown, so it doesn't dim while the other phone scans.
+ */
 export function MessageOut({ label, message }: MessageOutProps) {
+  const { t } = useLingui()
   const [copied, setCopied] = useState<'yes' | 'failed' | null>(null)
-  const fieldId = useId()
+  const labelId = useId()
+  const hintId = useId()
+  useWakeLock(true)
 
   async function copy() {
     try {
@@ -27,12 +35,18 @@ export function MessageOut({ label, message }: MessageOutProps) {
 
   return (
     <div className={styles.box}>
-      <label htmlFor={fieldId} className={styles.label}>
+      <p id={labelId} className={styles.label}>
         {label}
-      </label>
+      </p>
+      <QrCode value={message} label={t`QR code: ${label}`} />
+      <p id={hintId} className={styles.hint}>
+        <Trans>Or copy the text and send it:</Trans>
+      </p>
       {/* Read-only textarea: easy to select on a phone, and it wraps the long line */}
+      {/* Named by the same label as the QR code; the hint describes it */}
       <textarea
-        id={fieldId}
+        aria-labelledby={labelId}
+        aria-describedby={hintId}
         className={styles.message}
         value={message}
         readOnly

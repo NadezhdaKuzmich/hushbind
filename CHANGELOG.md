@@ -30,6 +30,8 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follo
 - Pairing two phones by text (`#/app/pair/start`, `/join`): versioned `HB1.…` messages with strict
   parsing, invites expire after 10 minutes (T10), clear errors for wrong or broken messages.
 - Frame guard: the app does not render inside another page’s frame (T17).
+- Pairing messages also shown as QR codes (`QrCode` component on lean-qr, drawn as one SVG path,
+  always dark on light); the screen stays on while a message is shown.
 - Stage 0 project: Vite 8, React 19 with React Compiler, TypeScript strict, Lingui, CSS Modules
   with dark and light design tokens.
 - Landing page: hero with live codes, call-scenario demo (tabs), “How it works” carousel,

@@ -25,6 +25,7 @@ test.describe('pairing two phones', () => {
     await mom.goto('/#/app/pair/join')
 
     await expect(son.getByRole('textbox', { name: 'Your invite' })).toHaveValue(/^HB1\.c\./)
+    await expect(son.getByRole('img', { name: 'QR code: Your invite' })).toBeVisible()
     await paste(mom, 'Their invite', await read(son, 'Your invite'))
     await paste(son, 'Their reply', await read(mom, 'Your reply'))
     await paste(mom, 'Their last message', await read(son, 'Send them this last message'))
