@@ -20,7 +20,7 @@ user data. In scope:
 
 | Limitation                                                 | Why                                     | Plan                                                      |
 | ---------------------------------------------------------- | --------------------------------------- | --------------------------------------------------------- |
-| CSP delivered via `<meta>`, no `frame-ancestors`           | GitHub Pages can’t set response headers | Move to a host with headers before passkeys               |
+| CSP delivered via `<meta>`, no `frame-ancestors`           | GitHub Pages can’t set response headers | JS frame guard now; a host with headers before passkeys   |
 | No HSTS preload control                                    | Same                                    | Same                                                      |
 | Demo secrets are public                                    | They only drive the demo                | Real secrets are per pair, created on device (ECDH)       |
 | Safari may evict site storage after 7 days without a visit | WebKit storage policy                   | Ask users to add the app to the home screen; recovery key |

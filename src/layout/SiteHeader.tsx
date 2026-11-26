@@ -3,7 +3,7 @@ import type { MouseEvent } from 'react'
 import { ButtonLink } from '../components/Button'
 import { Icon } from '../components/Icon'
 import { APP_NAME } from '../config'
-import { MAIN_ID } from '../router'
+import { MAIN_ID, toHref } from '../router'
 import styles from './SiteHeader.module.css'
 
 /**
@@ -16,7 +16,7 @@ function skipToContent(event: MouseEvent<HTMLAnchorElement>) {
 }
 
 /**
- * Top bar: skip link, logo, in-page navigation, main call to action.
+ * Top bar: skip link, logo, in-page navigation, link into the app.
  * The skip link is the first focusable element so keyboard users can jump past the nav.
  */
 export function SiteHeader() {
@@ -42,8 +42,9 @@ export function SiteHeader() {
             <Trans>Privacy</Trans>
           </a>
         </nav>
-        <ButtonLink href="#try" variant="secondary" className={styles.cta}>
-          <Trans>Try the demo</Trans>
+        {/* The app itself is one click away from every page */}
+        <ButtonLink href={toHref({ name: 'contacts' })} variant="secondary" className={styles.cta}>
+          <Trans>Open the app</Trans>
         </ButtonLink>
       </div>
     </header>

@@ -16,7 +16,7 @@ export function Hero() {
         <div className={styles.copy}>
           <div className={animations.fadeUp}>
             <Badge tone="warning" dot>
-              <Trans>Pet project · iOS app in development</Trans>
+              <Trans>Pet project · works on this device today</Trans>
             </Badge>
           </div>
           <h1

@@ -300,8 +300,8 @@ msgid "Hushbind can’t open inside another site"
 msgstr "Hushbind can’t open inside another site"
 
 #: src/features/landing/FinalCta.tsx
-msgid "Hushbind is an open-source pet project in active development. The web version comes first; an iOS app is being built and tested, not yet in the App Store."
-msgstr "Hushbind is an open-source pet project in active development. The web version comes first; an iOS app is being built and tested, not yet in the App Store."
+msgid "Hushbind is an open-source pet project in active development. The web app works on this device today; accounts and sync come next, then a phone app."
+msgstr "Hushbind is an open-source pet project in active development. The web app works on this device today; accounts and sync come next, then a phone app."
 
 #: src/features/prove/ProvePage.tsx
 msgid "If someone calls you and asks for your code, hang up and call {name} back yourself. Scammers ask for codes to pass them on."
@@ -437,6 +437,11 @@ msgstr "Only on a call you started"
 msgid "Open Hushbind in a new tab"
 msgstr "Open Hushbind in a new tab"
 
+#: src/features/landing/FinalCta.tsx
+#: src/layout/SiteHeader.tsx
+msgid "Open the app"
+msgstr "Open the app"
+
 #: src/features/pairs/VaultBoundary.tsx
 msgid "Opening your contacts…"
 msgstr "Opening your contacts…"
@@ -496,8 +501,8 @@ msgid "People you’ve paired with. Each pair has its own codes, and the secret 
 msgstr "People you’ve paired with. Each pair has its own codes, and the secret never leaves this device."
 
 #: src/features/landing/Hero.tsx
-msgid "Pet project · iOS app in development"
-msgstr "Pet project · iOS app in development"
+msgid "Pet project · works on this device today"
+msgstr "Pet project · works on this device today"
 
 #: src/features/pair/PairDemo.tsx
 msgid "Phone A"
@@ -550,10 +555,6 @@ msgstr "Ready."
 #: src/features/landing/TryIt.tsx
 msgid "Real call"
 msgstr "Real call"
-
-#: src/features/landing/FinalCta.tsx
-msgid "Registration opens in the next stage"
-msgstr "Registration opens in the next stage"
 
 #: src/features/contacts/ContactItem.tsx
 #: src/features/contacts/RemoveConfirm.tsx
@@ -815,7 +816,6 @@ msgid "Try pairing"
 msgstr "Try pairing"
 
 #: src/features/landing/Hero.tsx
-#: src/layout/SiteHeader.tsx
 msgid "Try the demo"
 msgstr "Try the demo"
 
@@ -874,6 +874,10 @@ msgstr "We can’t leak what we never have"
 #: src/layout/SiteHeader.tsx
 msgid "Why it works"
 msgstr "Why it works"
+
+#: src/features/landing/FinalCta.tsx
+msgid "Works on this device today"
+msgstr "Works on this device today"
 
 #. placeholder {0}: view.attemptsLeft
 #: src/features/check/CallerCheck.tsx

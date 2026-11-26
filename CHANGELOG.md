@@ -36,6 +36,8 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follo
   otherwise jsQR loaded on demand; only `HB1.…` codes are accepted; the camera always turns off.
 - CI checks the translation catalog is up to date (`npm run i18n:check`); catalog without line
   numbers.
+- “Open the app” in the header and the final call to action.
+
 - Stage 0 project: Vite 8, React 19 with React Compiler, TypeScript strict, Lingui, CSS Modules
   with dark and light design tokens.
 - Landing page: hero with live codes, call-scenario demo (tabs), “How it works” carousel,
@@ -47,7 +49,13 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follo
   WCAG checks in both themes.
 - GitHub Actions: lint, type-check, coverage, audit, E2E, GitHub Pages deploy. Renovate config.
 
+### Changed
+
+- Landing and README describe the real status: the web app works on this device today.
+- Threat model reviewed for stage 1 (T7, T8, T9, T13 updated; T13 marked partial honestly).
+
 ### Fixed
 
 - Parallel vault changes could overwrite each other; writes now run one at a time.
 - `useTotpCode` could briefly show the previous key’s code after the key changed.
+- Flaky accessibility test on live screens: axe now runs inside `act`.
