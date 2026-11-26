@@ -37,6 +37,12 @@ const scrollTo = vi.fn<(...args: unknown[]) => void>()
 Element.prototype.scrollIntoView = scrollIntoView
 Object.defineProperty(window, 'scrollTo', { writable: true, value: scrollTo })
 
+// jsdom can't play media; a resolved play() is enough for the camera preview
+Object.defineProperty(HTMLMediaElement.prototype, 'play', {
+  configurable: true,
+  value: () => Promise.resolve(),
+})
+
 /** The scroll mocks, so tests assert on them without pulling methods off objects. */
 export const scrollMocks = { scrollIntoView, scrollTo }
 

@@ -1,30 +1,47 @@
 import { Trans } from '@lingui/react/macro'
-import { useId, useTransition, type Ref, type SubmitEvent } from 'react'
+import { useId, useRef, useState, useTransition, type SubmitEvent } from 'react'
 import { Button } from '../../components/Button'
+import { QrScanner } from '../../components/QrScanner'
 import styles from './RemotePairing.module.css'
 
 export interface MessageInProps {
-  /** What to paste, e.g. "Their reply". */
+  /** What to receive, e.g. "Their reply". */
   label: string
-  /** Handles the pasted text. Problems come back through `error`, not by throwing. */
+  /** Handles the text. Problems come back through `error`, not by throwing. */
   onSubmit: (text: string) => Promise<void>
   /** Shown under the field, announced as an alert. */
   error?: string | null
-  field?: Ref<HTMLTextAreaElement>
 }
 
-/** Where the other phone's message goes in: paste (and, in a later step, scan a QR code). */
-export function MessageIn({ label, onSubmit, error, field }: MessageInProps) {
+/** Only our pairing messages stop the scanner; any other QR code is ignored. */
+const isPairingMessage = (text: string) => text.startsWith('HB1.')
+
+/** Where the other phone's message comes in: scan its QR code, or paste the text. */
+export function MessageIn({ label, onSubmit, error }: MessageInProps) {
   const [isPending, startTransition] = useTransition()
+  const [scanning, setScanning] = useState(false)
+  const field = useRef<HTMLTextAreaElement>(null)
+  const scanButton = useRef<HTMLButtonElement>(null)
   const fieldId = useId()
   const errorId = useId()
+
+  function submit(text: string) {
+    startTransition(async () => {
+      await onSubmit(text)
+    })
+  }
 
   function handleSubmit(event: SubmitEvent<HTMLFormElement>) {
     event.preventDefault()
     const text = new FormData(event.currentTarget).get('message')
-    startTransition(async () => {
-      await onSubmit(typeof text === 'string' ? text : '')
-    })
+    submit(typeof text === 'string' ? text : '')
+  }
+
+  function handleScan(text: string) {
+    setScanning(false)
+    // Show what was read, so a wrong code can be seen and fixed by hand
+    if (field.current) field.current.value = text
+    submit(text)
   }
 
   return (
@@ -32,6 +49,27 @@ export function MessageIn({ label, onSubmit, error, field }: MessageInProps) {
       <label htmlFor={fieldId} className={styles.label}>
         {label}
       </label>
+      {scanning ? (
+        <QrScanner
+          accept={isPairingMessage}
+          onResult={handleScan}
+          onCancel={() => {
+            setScanning(false)
+            // The scanner (and its button) is gone: return focus to where it came from
+            requestAnimationFrame(() => scanButton.current?.focus())
+          }}
+        />
+      ) : (
+        <Button
+          ref={scanButton}
+          variant="secondary"
+          onClick={() => {
+            setScanning(true)
+          }}
+        >
+          <Trans>Scan QR code</Trans>
+        </Button>
+      )}
       <textarea
         ref={field}
         id={fieldId}
@@ -42,6 +80,7 @@ export function MessageIn({ label, onSubmit, error, field }: MessageInProps) {
         spellCheck={false}
         autoComplete="off"
         autoCapitalize="off"
+        placeholder="HB1.…"
         aria-invalid={error ? true : undefined}
         aria-describedby={error ? errorId : undefined}
       />

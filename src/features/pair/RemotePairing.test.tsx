@@ -159,6 +159,33 @@ describe('RemotePairing', () => {
     expect(son.screen.getByRole('img', { name: 'QR code: Your invite' })).toBeInTheDocument()
   })
 
+  it('joins by scanning the invite’s QR code', async () => {
+    const { son, mom } = renderPair()
+    const invite = await readMessage(son, 'Your invite')
+    // A camera, and a native detector that "sees" the son's QR code
+    const stream = { getTracks: () => [{ stop: vi.fn() }] }
+    Object.defineProperty(navigator, 'mediaDevices', {
+      configurable: true,
+      value: { getUserMedia: () => Promise.resolve(stream) },
+    })
+    Object.defineProperty(globalThis, 'BarcodeDetector', {
+      configurable: true,
+      value: Object.assign(
+        function BarcodeDetector() {
+          return { detect: () => Promise.resolve([{ rawValue: invite }]) }
+        },
+        { getSupportedFormats: () => Promise.resolve(['qr_code']) },
+      ),
+    })
+    try {
+      await userEvent.click(mom.screen.getByRole('button', { name: 'Scan QR code' }))
+      expect(await mom.screen.findByRole('heading', { name: 'Send your reply' })).toHaveFocus()
+    } finally {
+      Reflect.deleteProperty(navigator, 'mediaDevices')
+      Reflect.deleteProperty(globalThis, 'BarcodeDetector')
+    }
+  })
+
   it('copies a message, and says so', async () => {
     const writeText = vi.fn(() => Promise.resolve())
     Object.defineProperty(navigator, 'clipboard', { value: { writeText }, configurable: true })

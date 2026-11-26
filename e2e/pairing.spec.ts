@@ -1,5 +1,6 @@
 import AxeBuilder from '@axe-core/playwright'
-import { expect, test, type Page } from '@playwright/test'
+import { chromium, expect, test, type Page } from '@playwright/test'
+import { writeQrVideo } from './support/fakeCamera.ts'
 
 /** Copy a message on one phone… */
 async function read(page: Page, label: string) {
@@ -58,6 +59,39 @@ test.describe('pairing two phones', () => {
 
     await sonPhone.close()
     await momPhone.close()
+  })
+
+  test('joins by scanning the invite with the camera', async ({ page, isMobile }, testInfo) => {
+    test.skip(isMobile, 'One camera run is enough; the fake camera is a desktop Chromium flag')
+    await page.goto('/#/app/pair/start')
+    const invite = await read(page, 'Your invite')
+
+    // A second browser whose camera "films" the son's QR code
+    const video = testInfo.outputPath('invite.y4m')
+    writeQrVideo(invite, video)
+    const cameraBrowser = await chromium.launch({
+      ...testInfo.project.use.launchOptions,
+      args: [
+        '--use-fake-ui-for-media-stream',
+        '--use-fake-device-for-media-stream',
+        `--use-file-for-fake-video-capture=${video}`,
+      ],
+    })
+    try {
+      const context = await cameraBrowser.newContext({
+        baseURL: testInfo.project.use.baseURL ?? '',
+        permissions: ['camera'],
+      })
+      const mom = await context.newPage()
+      await mom.goto('/#/app/pair/join')
+      await mom.getByRole('button', { name: 'Scan QR code' }).click()
+      await expect(mom.getByRole('heading', { name: 'Send your reply' })).toBeVisible({
+        timeout: 15_000,
+      })
+      await expect(mom.getByRole('textbox', { name: 'Your reply' })).toHaveValue(/^HB1\.k\./)
+    } finally {
+      await cameraBrowser.close()
+    }
   })
 
   test('a reply pasted into the wrong phone is explained', async ({ page }) => {

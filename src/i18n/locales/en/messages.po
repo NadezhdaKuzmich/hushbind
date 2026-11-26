@@ -7,891 +7,915 @@ msgstr ""
 "X-Generator: @lingui/cli\n"
 "Language: en\n"
 
-#: src/features/landing/TryIt.tsx:25
+#: src/features/landing/TryIt.tsx
 msgid "“Hi, it’s me. Can you send me the bank details for the rent?”"
 msgstr "“Hi, it’s me. Can you send me the bank details for the rent?”"
 
-#: src/features/landing/TryIt.tsx:21
+#: src/features/landing/TryIt.tsx
 msgid "“Mom, it’s me. I crashed the car, I need money right now. Please don’t tell Dad.”"
 msgstr "“Mom, it’s me. I crashed the car, I need money right now. Please don’t tell Dad.”"
 
-#: src/features/landing/TryIt.tsx:29
+#: src/features/landing/TryIt.tsx
 msgid "“Sure. What’s our code?”"
 msgstr "“Sure. What’s our code?”"
 
 #. placeholder {0}: String(i + 1)
 #. placeholder {1}: String(count)
 #. placeholder {2}: slide.title
-#: src/components/Carousel/Carousel.tsx:167
+#: src/components/Carousel/Carousel.tsx
 msgid "{0} of {1}: {2}"
 msgstr "{0} of {1}: {2}"
 
-#: src/features/check/CallerCheck.tsx:113
+#: src/features/check/CallerCheck.tsx
 msgid "{minutes, plural, one {Checking is paused for # minute.} other {Checking is paused for # minutes.}}"
 msgstr "{minutes, plural, one {Checking is paused for # minute.} other {Checking is paused for # minutes.}}"
 
-#: src/features/contacts/ContactList.tsx:15
+#: src/features/contacts/ContactList.tsx
 msgid "{name} removed."
 msgstr "{name} removed."
 
-#: src/features/landing/LiveCode.tsx:16
-#: src/features/prove/ProvePage.tsx:35
+#: src/features/landing/LiveCode.tsx
+#: src/features/prove/ProvePage.tsx
 msgid "{secondsLeft, plural, one {Changes in # second} other {Changes in # seconds}}"
 msgstr "{secondsLeft, plural, one {Changes in # second} other {Changes in # seconds}}"
 
-#: src/features/landing/WhyItWorks.tsx:17
+#: src/features/landing/WhyItWorks.tsx
 msgid "A cloned voice copies how someone sounds. It can’t copy a secret that lives only on two phones."
 msgstr "A cloned voice copies how someone sounds. It can’t copy a secret that lives only on two phones."
 
-#: src/features/check/CallerCheck.tsx:168
+#: src/features/check/CallerCheck.tsx
 msgid "A real {name} never refuses to read the code. “No time”, “the app is broken” — hang up and call them back on the number you know."
 msgstr "A real {name} never refuses to read the code. “No time”, “the app is broken” — hang up and call them back on the number you know."
 
-#: src/features/landing/Hero.tsx:26
+#: src/features/landing/Hero.tsx
 msgid "A voice can be cloned. <0>A shared secret can’t.</0>"
 msgstr "A voice can be cloned. <0>A shared secret can’t.</0>"
 
-#: src/features/landing/Privacy.tsx:30
+#: src/features/landing/Privacy.tsx
 msgid "Accounts use passkeys — no email, no phone number, no password. The server stores only encrypted data it can’t read."
 msgstr "Accounts use passkeys — no email, no phone number, no password. The server stores only encrypted data it can’t read."
 
-#: src/features/landing/FinalCta.tsx:20
+#: src/features/landing/FinalCta.tsx
 msgid "Agree on a code before the call comes"
 msgstr "Agree on a code before the call comes"
 
-#: src/features/pair/PairDemo.tsx:148
+#: src/features/pair/PairDemo.tsx
 msgid "An attacker sits between the phones and swaps every message."
 msgstr "An attacker sits between the phones and swaps every message."
 
-#: src/layout/SiteFooter.tsx:12
+#: src/layout/SiteFooter.tsx
 msgid "An open-source pet project, not a commercial product."
 msgstr "An open-source pet project, not a commercial product."
 
-#: src/features/check/CallerCheck.tsx:136
+#: src/features/check/CallerCheck.tsx
 msgid "Ask {name} to read their code, then type what you hear."
 msgstr "Ask {name} to read their code, then type what you hear."
 
-#: src/features/landing/HowItWorks.tsx:61
+#: src/features/landing/HowItWorks.tsx
 msgid "Ask for the code"
 msgstr "Ask for the code"
 
-#: src/features/pair/RemotePairing.tsx:158
+#: src/features/pair/RemotePairing.tsx
 msgid "Ask the other person to start pairing and send you their invite, or show it on their screen."
 msgstr "Ask the other person to start pairing and send you their invite, or show it on their screen."
 
-#: src/features/check/CheckPage.tsx:24
-#: src/features/pair/PairPage.tsx:61
-#: src/features/prove/ProvePage.tsx:71
+#: src/features/check/CheckPage.tsx
+#: src/features/pair/PairPage.tsx
+#: src/features/prove/ProvePage.tsx
 msgid "Back to contacts"
 msgstr "Back to contacts"
 
-#: src/features/landing/Privacy.tsx:45
+#: src/features/landing/Privacy.tsx
 msgid "Backups are end-to-end encrypted with a key only you hold."
 msgstr "Backups are end-to-end encrypted with a key only you hold."
 
-#: src/features/landing/HowItWorks.tsx:52
+#: src/features/landing/HowItWorks.tsx
 msgid "Both phones compute the same 6-digit code from the secret and the current time. No network needed, works in airplane mode."
 msgstr "Both phones compute the same 6-digit code from the secret and the current time. No network needed, works in airplane mode."
 
-#: src/features/pair/PairPage.tsx:40
+#: src/features/pair/PairPage.tsx
 msgid "Both phones on this screen, with or without an attacker."
 msgstr "Both phones on this screen, with or without an attacker."
 
-#: src/features/landing/WhyItWorks.tsx:15
+#: src/features/landing/WhyItWorks.tsx
 msgid "Built on the same idea as bank 2FA"
 msgstr "Built on the same idea as bank 2FA"
 
-#: src/features/landing/TryIt.tsx:81
+#: src/features/landing/TryIt.tsx
 msgid "Call scenarios"
 msgstr "Call scenarios"
 
-#: src/features/contacts/RemoveConfirm.tsx:56
-#: src/features/contacts/RenameForm.tsx:94
+#: src/components/QrScanner/QrScanner.tsx
+msgid "Camera access is off for this site. Allow it in the browser settings, or paste the text instead."
+msgstr "Camera access is off for this site. Allow it in the browser settings, or paste the text instead."
+
+#: src/features/contacts/RemoveConfirm.tsx
+#: src/features/contacts/RenameForm.tsx
 msgid "Cancel"
 msgstr "Cancel"
 
-#: src/components/Carousel/Carousel.tsx:72
+#: src/components/QrScanner/QrScanner.tsx
+msgid "Cancel scanning"
+msgstr "Cancel scanning"
+
+#: src/components/Carousel/Carousel.tsx
 msgid "carousel"
 msgstr "carousel"
 
-#: src/features/check/CallerCheck.tsx:158
+#: src/features/check/CallerCheck.tsx
 msgid "Check"
 msgstr "Check"
 
-#: src/features/check/CheckPage.tsx:19
+#: src/features/check/CheckPage.tsx
 msgid "Check a caller"
 msgstr "Check a caller"
 
-#: src/features/check/CallerCheck.tsx:94
+#: src/features/check/CallerCheck.tsx
 msgid "Check again"
 msgstr "Check again"
 
-#: src/features/contacts/ContactItem.tsx:70
+#: src/features/contacts/ContactItem.tsx
 msgid "Check caller"
 msgstr "Check caller"
 
-#: src/features/contacts/ContactItem.tsx:68
+#: src/features/contacts/ContactItem.tsx
 msgid "Check caller {name}"
 msgstr "Check caller {name}"
 
-#: src/features/pair/PhoneCard.tsx:31
+#: src/features/pair/PhoneCard.tsx
 msgid "Check number"
 msgstr "Check number"
 
-#: src/features/pair/PairDemo.tsx:242
+#: src/features/pair/PairDemo.tsx
 msgid "Checked that the revealed key matches the commitment, then worked out the shared secret."
 msgstr "Checked that the revealed key matches the commitment, then worked out the shared secret."
 
-#: src/features/check/CallerCheck.tsx:80
+#: src/components/QrScanner/QrScanner.tsx
+msgid "Close"
+msgstr "Close"
+
+#: src/features/check/CallerCheck.tsx
 msgid "Code matches"
 msgstr "Code matches"
 
-#: src/features/landing/TryIt.tsx:47
+#: src/features/landing/TryIt.tsx
 msgid "Code on your screen"
 msgstr "Code on your screen"
 
-#: src/features/landing/TryIt.tsx:37
+#: src/features/landing/TryIt.tsx
 msgid "Code the caller says"
 msgstr "Code the caller says"
 
-#: src/features/check/CallerCheck.tsx:140
+#: src/features/check/CallerCheck.tsx
 msgid "Code you hear"
 msgstr "Code you hear"
 
-#: src/features/landing/HowItWorks.tsx:49
+#: src/features/landing/HowItWorks.tsx
 msgid "Codes change every 30 s"
 msgstr "Codes change every 30 s"
 
-#: src/features/landing/HowItWorks.tsx:51
+#: src/features/landing/HowItWorks.tsx
 msgid "Codes change every 30 seconds"
 msgstr "Codes change every 30 seconds"
 
-#: src/features/landing/TryIt.tsx:51
+#: src/features/landing/TryIt.tsx
 msgid "Codes differ. Hang up and call back on the number you know."
 msgstr "Codes differ. Hang up and call back on the number you know."
 
-#: src/features/landing/TryIt.tsx:53
+#: src/features/landing/TryIt.tsx
 msgid "Codes match. It’s really them."
 msgstr "Codes match. It’s really them."
 
-#: src/features/pair/PairDemo.tsx:164
+#: src/features/pair/PairDemo.tsx
 msgid "Commitment"
 msgstr "Commitment"
 
-#: src/features/landing/HowItWorks.tsx:73
-#: src/features/landing/HowItWorks.tsx:75
+#: src/features/landing/HowItWorks.tsx
 msgid "Compare and decide"
 msgstr "Compare and decide"
 
-#: src/features/pair/RemotePairing.tsx:270
+#: src/features/pair/RemotePairing.tsx
 msgid "Compare check numbers"
 msgstr "Compare check numbers"
 
-#: src/features/pair/FinishPairing.tsx:27
+#: src/features/pair/FinishPairing.tsx
 msgid "Compare it with the number on their phone — side by side, or on a video call. Not by text message: whoever could change the messages could change that too."
 msgstr "Compare it with the number on their phone — side by side, or on a video call. Not by text message: whoever could change the messages could change that too."
 
-#: src/features/contacts/ContactList.tsx:21
+#: src/features/contacts/ContactList.tsx
 msgid "Contacts"
 msgstr "Contacts"
 
-#: src/features/pair/MessageIn.tsx:54
+#: src/features/pair/MessageIn.tsx
 msgid "Continue"
 msgstr "Continue"
 
-#: src/features/pair/MessageOut.tsx:66
+#: src/features/pair/MessageOut.tsx
 msgid "Copied."
 msgstr "Copied."
 
-#: src/features/pair/MessageOut.tsx:63
+#: src/features/pair/MessageOut.tsx
 msgid "Copy"
 msgstr "Copy"
 
-#: src/features/pair/MessageOut.tsx:67
+#: src/features/pair/MessageOut.tsx
 msgid "Couldn’t copy. Select the text and copy it."
 msgstr "Couldn’t copy. Select the text and copy it."
 
-#: src/features/pairs/VaultBoundary.tsx:25
+#: src/features/pairs/VaultBoundary.tsx
 msgid "Couldn’t open your contacts on this device. Private browsing or blocked site storage can cause this."
 msgstr "Couldn’t open your contacts on this device. Private browsing or blocked site storage can cause this."
 
-#: src/features/contacts/RemoveConfirm.tsx:48
+#: src/features/contacts/RemoveConfirm.tsx
 msgid "Couldn’t remove. Try again."
 msgstr "Couldn’t remove. Try again."
 
-#: src/features/contacts/RenameForm.tsx:55
-#: src/features/pair/FinishPairing.tsx:73
-#: src/features/pair/NameForm.tsx:37
+#: src/features/contacts/RenameForm.tsx
+#: src/features/pair/FinishPairing.tsx
+#: src/features/pair/NameForm.tsx
 msgid "Couldn’t save. Try again."
 msgstr "Couldn’t save. Try again."
 
-#: src/features/pair/NameForm.tsx:66
+#: src/features/pair/NameForm.tsx
 msgid "Demo phone A"
 msgstr "Demo phone A"
 
-#: src/features/pair/NameForm.tsx:54
+#: src/features/pair/NameForm.tsx
 msgid "Demo phone B"
 msgstr "Demo phone B"
 
-#: src/features/pair/PairDemo.tsx:252
+#: src/features/pair/PairDemo.tsx
 msgid "Do the check numbers match?"
 msgstr "Do the check numbers match?"
 
-#: src/features/landing/Privacy.tsx:39
+#: src/features/landing/Privacy.tsx
 msgid "Family secrets are created on your phones and never sent to a server."
 msgstr "Family secrets are created on your phones and never sent to a server."
 
-#: src/features/landing/FinalCta.tsx:40
+#: src/features/landing/FinalCta.tsx
 msgid "Follow on GitHub"
 msgstr "Follow on GitHub"
 
-#: src/features/landing/HowItWorks.tsx:90
+#: src/features/landing/HowItWorks.tsx
 msgid "Four steps, one minute to set up"
 msgstr "Four steps, one minute to set up"
 
-#: src/features/pair/PairDemo.tsx:359
-#: src/features/pair/RemotePairing.tsx:197
+#: src/features/pair/PairDemo.tsx
+#: src/features/pair/RemotePairing.tsx
 msgid "Go to contacts"
 msgstr "Go to contacts"
 
-#: src/features/not-found/NotFoundPage.tsx:15
+#: src/features/not-found/NotFoundPage.tsx
 msgid "Go to the home page"
 msgstr "Go to the home page"
 
-#: src/features/pair/PairDemo.tsx:315
+#: src/features/pair/PairDemo.tsx
 msgid "Good catch. An attacker was in the middle: each phone paired with the attacker, not with the other phone. Nothing was saved."
 msgstr "Good catch. An attacker was in the middle: each phone paired with the attacker, not with the other phone. Nothing was saved."
 
-#: src/features/pair/PairDemo.tsx:208
+#: src/features/pair/PairDemo.tsx
 msgid "Got phone B’s key, worked out the shared secret and its check number. Now it reveals its own key."
 msgstr "Got phone B’s key, worked out the shared secret and its check number. Now it reveals its own key."
 
-#: src/features/check/CallerCheck.tsx:108
+#: src/features/check/CallerCheck.tsx
 msgid "Hang up. Call {name} back on the number you know — not the one that called you."
 msgstr "Hang up. Call {name} back on the number you know — not the one that called you."
 
-#: src/features/landing/WhyItWorks.tsx:54
+#: src/features/landing/WhyItWorks.tsx
 msgid "Honest limits"
 msgstr "Honest limits"
 
-#: src/features/landing/HowItWorks.tsx:92
+#: src/features/landing/HowItWorks.tsx
 msgid "How Hushbind works"
 msgstr "How Hushbind works"
 
-#: src/features/landing/Hero.tsx:42
-#: src/features/landing/HowItWorks.tsx:89
-#: src/layout/SiteHeader.tsx:36
+#: src/features/landing/Hero.tsx
+#: src/features/landing/HowItWorks.tsx
+#: src/layout/SiteHeader.tsx
 msgid "How it works"
 msgstr "How it works"
 
-#: src/layout/FramedNotice.tsx:27
+#: src/layout/FramedNotice.tsx
 msgid "Hushbind can’t open inside another site"
 msgstr "Hushbind can’t open inside another site"
 
-#: src/features/landing/FinalCta.tsx:23
+#: src/features/landing/FinalCta.tsx
 msgid "Hushbind is an open-source pet project in active development. The web version comes first; an iOS app is being built and tested, not yet in the App Store."
 msgstr "Hushbind is an open-source pet project in active development. The web version comes first; an iOS app is being built and tested, not yet in the App Store."
 
-#: src/features/prove/ProvePage.tsx:44
+#: src/features/prove/ProvePage.tsx
 msgid "If someone calls you and asks for your code, hang up and call {name} back yourself. Scammers ask for codes to pass them on."
 msgstr "If someone calls you and asks for your code, hang up and call {name} back yourself. Scammers ask for codes to pass them on."
 
-#: src/features/pair/PairDemo.tsx:255
+#: src/features/pair/PairDemo.tsx
 msgid "In real life you compare them out loud or on video. The same number on both phones means no one is in the middle."
 msgstr "In real life you compare them out loud or on video. The same number on both phones means no one is in the middle."
 
-#: src/features/landing/WhyItWorks.tsx:56
+#: src/features/landing/WhyItWorks.tsx
 msgid "It protects only if you ask. If the scammer has your relative’s unlocked phone, no code can help."
 msgstr "It protects only if you ask. If the scammer has your relative’s unlocked phone, no code can help."
 
-#: src/features/pair/PairPage.tsx:26
+#: src/features/pair/PairPage.tsx
 msgid "Join"
 msgstr "Join"
 
-#: src/features/pair/PairPage.tsx:32
-#: src/features/pair/PairPage.tsx:56
+#: src/features/pair/PairPage.tsx
 msgid "Join pairing"
 msgstr "Join pairing"
 
-#: src/features/pair/PairDemo.tsx:186
+#: src/features/pair/PairDemo.tsx
 msgid "Kept the commitment and made its own key pair."
 msgstr "Kept the commitment and made its own key pair."
 
-#: src/layout/PageLoading.tsx:12
+#: src/layout/PageLoading.tsx
 msgid "Loading…"
 msgstr "Loading…"
 
 #. placeholder {0}: formatCode(view.session.aResult.sas)
 #. placeholder {1}: formatCode(view.session.bResult.sas)
-#: src/features/pair/PairDemo.tsx:262
+#: src/features/pair/PairDemo.tsx
 msgid "Look again: {0} and {1} are different. Saving now would pair each phone with the attacker."
 msgstr "Look again: {0} and {1} are different. Saving now would pair each phone with the attacker."
 
-#: src/features/pair/PairDemo.tsx:159
+#: src/features/pair/PairDemo.tsx
 msgid "Made a key pair and a commitment: a hash of its public key. The key itself stays hidden for now."
 msgstr "Made a key pair and a commitment: a hash of its public key. The key itself stays hidden for now."
 
-#: src/layout/SiteHeader.tsx:34
+#: src/layout/SiteHeader.tsx
 msgid "Main"
 msgstr "Main"
 
-#: src/features/landing/Hero.tsx:61
+#: src/features/landing/Hero.tsx
 msgid "Mom’s code for you"
 msgstr "Mom’s code for you"
 
-#: src/features/landing/Hero.tsx:59
+#: src/features/landing/Hero.tsx
 msgid "Mom’s phone"
 msgstr "Mom’s phone"
 
-#: src/features/contacts/ContactItem.tsx:63
+#: src/features/contacts/ContactItem.tsx
 msgid "My code"
 msgstr "My code"
 
-#: src/features/contacts/ContactItem.tsx:61
+#: src/features/contacts/ContactItem.tsx
 msgid "My code for {name}"
 msgstr "My code for {name}"
 
-#: src/features/contacts/ContactsPage.tsx:13
+#: src/features/contacts/ContactsPage.tsx
 msgid "My contacts"
 msgstr "My contacts"
 
-#: src/features/pair/PairDemo.tsx:299
+#: src/features/pair/PairDemo.tsx
 msgid "Name each other"
 msgstr "Name each other"
 
-#: src/features/pair/FinishPairing.tsx:82
+#: src/features/pair/FinishPairing.tsx
 msgid "Name for this contact"
 msgstr "Name for this contact"
 
-#: src/features/pair/RemotePairing.tsx:177
+#: src/features/pair/RemotePairing.tsx
 msgid "Name this contact"
 msgstr "Name this contact"
 
-#: src/features/contacts/RenameForm.tsx:69
+#: src/features/contacts/RenameForm.tsx
 msgid "New name for {oldName}"
 msgstr "New name for {oldName}"
 
-#: src/components/Carousel/Carousel.tsx:134
+#: src/components/Carousel/Carousel.tsx
 msgid "Next slide"
 msgstr "Next slide"
 
-#: src/features/contacts/ContactList.tsx:28
+#: src/components/QrScanner/QrScanner.tsx
+msgid "No camera found. Paste the text instead."
+msgstr "No camera found. Paste the text instead."
+
+#: src/features/contacts/ContactList.tsx
 msgid "No contacts yet. Pair with someone you trust — best side by side — or try it on this device first."
 msgstr "No contacts yet. Pair with someone you trust — best side by side — or try it on this device first."
 
-#: src/features/landing/Privacy.tsx:48
+#: src/features/landing/Privacy.tsx
 msgid "No trackers, no ads, no analytics. The code is open source."
 msgstr "No trackers, no ads, no analytics. The code is open source."
 
-#: src/features/landing/WhyItWorks.tsx:44
+#: src/features/landing/WhyItWorks.tsx
 msgid "Nothing to look up online"
 msgstr "Nothing to look up online"
 
-#: src/features/pair/RemotePairing.tsx:209
+#: src/features/pair/RemotePairing.tsx
 msgid "Nothing was saved. Different numbers mean someone may be in the middle. Pair again side by side."
 msgstr "Nothing was saved. Different numbers mean someone may be in the middle. Pair again side by side."
 
-#: src/features/pair/PairDemo.tsx:320
+#: src/features/pair/PairDemo.tsx
 msgid "Nothing was saved. If the numbers really differ, someone may be in the middle — pair again, side by side."
 msgstr "Nothing was saved. If the numbers really differ, someone may be in the middle — pair again, side by side."
 
-#: src/features/pair/RemotePairing.tsx:194
+#: src/features/pair/RemotePairing.tsx
 msgid "Now you can check each other’s calls. The secret stays on this phone."
 msgstr "Now you can check each other’s calls. The secret stays on this phone."
 
-#: src/features/pair/FinishPairing.tsx:34
+#: src/features/pair/FinishPairing.tsx
 msgid "Numbers match"
 msgstr "Numbers match"
 
-#: src/features/pair/NameForm.tsx:47
+#: src/features/pair/NameForm.tsx
 msgid "On phone A, phone B is called"
 msgstr "On phone A, phone B is called"
 
-#: src/features/pair/NameForm.tsx:60
+#: src/features/pair/NameForm.tsx
 msgid "On phone B, phone A is called"
 msgstr "On phone B, phone A is called"
 
-#: src/features/landing/WhyItWorks.tsx:34
+#: src/features/landing/WhyItWorks.tsx
 msgid "One secret per pair"
 msgstr "One secret per pair"
 
-#: src/features/prove/ProvePage.tsx:41
+#: src/features/prove/ProvePage.tsx
 msgid "Only on a call you started"
 msgstr "Only on a call you started"
 
-#: src/layout/FramedNotice.tsx:33
+#: src/layout/FramedNotice.tsx
 msgid "Open Hushbind in a new tab"
 msgstr "Open Hushbind in a new tab"
 
-#: src/features/pairs/VaultBoundary.tsx:45
+#: src/features/pairs/VaultBoundary.tsx
 msgid "Opening your contacts…"
 msgstr "Opening your contacts…"
 
-#: src/features/pair/MessageOut.tsx:43
+#: src/features/pair/MessageOut.tsx
 msgid "Or copy the text and send it:"
 msgstr "Or copy the text and send it:"
 
-#: src/features/pair/PairPage.tsx:62
+#: src/features/pair/PairPage.tsx
 msgid "Other ways to pair"
 msgstr "Other ways to pair"
 
-#: src/features/landing/WhyItWorks.tsx:25
+#: src/features/landing/WhyItWorks.tsx
 msgid "Overheard? Useless in 30 s"
 msgstr "Overheard? Useless in 30 s"
 
-#: src/features/not-found/NotFoundPage.tsx:11
+#: src/features/not-found/NotFoundPage.tsx
 msgid "Page not found"
 msgstr "Page not found"
 
-#: src/features/pair/PairDemo.tsx:362
+#: src/features/pair/PairDemo.tsx
 msgid "Pair again"
 msgstr "Pair again"
 
-#: src/features/landing/HowItWorks.tsx:37
-#: src/features/landing/HowItWorks.tsx:39
+#: src/features/landing/HowItWorks.tsx
 msgid "Pair once"
 msgstr "Pair once"
 
-#: src/features/contacts/ContactsPage.tsx:22
-#: src/features/pair/PairPage.tsx:54
+#: src/features/contacts/ContactsPage.tsx
+#: src/features/pair/PairPage.tsx
 msgid "Pair with someone"
 msgstr "Pair with someone"
 
-#: src/features/contacts/ContactItem.tsx:49
+#: src/features/contacts/ContactItem.tsx
 msgid "Paired on <0>{pairedOn}</0>"
 msgstr "Paired on <0>{pairedOn}</0>"
 
-#: src/features/pair/RemotePairing.tsx:192
+#: src/features/pair/RemotePairing.tsx
 msgid "Paired with {name}"
 msgstr "Paired with {name}"
 
-#: src/features/pair/PairDemo.tsx:335
+#: src/features/pair/PairDemo.tsx
 msgid "Pairing failed"
 msgstr "Pairing failed"
 
-#: src/features/pair/PairDemo.tsx:311
-#: src/features/pair/RemotePairing.tsx:206
+#: src/features/pair/PairDemo.tsx
+#: src/features/pair/RemotePairing.tsx
 msgid "Pairing stopped"
 msgstr "Pairing stopped"
 
-#: src/features/pair/RemotePairing.tsx:156
+#: src/features/pair/RemotePairing.tsx
 msgid "Paste the invite"
 msgstr "Paste the invite"
 
-#: src/features/contacts/ContactsPage.tsx:15
+#: src/features/contacts/ContactsPage.tsx
 msgid "People you’ve paired with. Each pair has its own codes, and the secret never leaves this device."
 msgstr "People you’ve paired with. Each pair has its own codes, and the secret never leaves this device."
 
-#: src/features/landing/Hero.tsx:19
+#: src/features/landing/Hero.tsx
 msgid "Pet project · iOS app in development"
 msgstr "Pet project · iOS app in development"
 
-#: src/features/pair/PairDemo.tsx:96
+#: src/features/pair/PairDemo.tsx
 msgid "Phone A"
 msgstr "Phone A"
 
-#: src/features/pair/PairDemo.tsx:97
+#: src/features/pair/PairDemo.tsx
 msgid "Phone B"
 msgstr "Phone B"
 
-#: src/features/pair/RemotePairing.tsx:148
+#: src/components/QrScanner/QrScanner.tsx
+msgid "Point the camera at the QR code on the other phone."
+msgstr "Point the camera at the QR code on the other phone."
+
+#: src/features/pair/RemotePairing.tsx
 msgid "Preparing your invite…"
 msgstr "Preparing your invite…"
 
-#: src/components/Carousel/Carousel.tsx:123
+#: src/components/Carousel/Carousel.tsx
 msgid "Previous slide"
 msgstr "Previous slide"
 
-#: src/layout/SiteHeader.tsx:42
+#: src/layout/SiteHeader.tsx
 msgid "Privacy"
 msgstr "Privacy"
 
-#: src/features/landing/Privacy.tsx:27
+#: src/features/landing/Privacy.tsx
 msgid "Privacy by design"
 msgstr "Privacy by design"
 
-#: src/features/pair/PairDemo.tsx:187
-#: src/features/pair/PairDemo.tsx:214
+#: src/features/pair/PairDemo.tsx
 msgid "Public key"
 msgstr "Public key"
 
-#: src/features/pair/PairDemo.tsx:127
+#: src/features/pair/PairDemo.tsx
 msgid "Put an attacker in the middle"
 msgstr "Put an attacker in the middle"
 
-#: src/features/pair/MessageOut.tsx:41
+#: src/features/pair/MessageOut.tsx
 msgid "QR code: {label}"
 msgstr "QR code: {label}"
 
-#: src/features/prove/ProvePage.tsx:28
+#: src/features/prove/ProvePage.tsx
 msgid "Read this code to {name} when they ask. A new one appears every 30 seconds."
 msgstr "Read this code to {name} when they ask. A new one appears every 30 seconds."
 
-#: src/features/pair/PairDemo.tsx:236
+#: src/features/pair/PairDemo.tsx
 msgid "Ready."
 msgstr "Ready."
 
-#: src/features/landing/TryIt.tsx:84
+#: src/features/landing/TryIt.tsx
 msgid "Real call"
 msgstr "Real call"
 
-#: src/features/landing/FinalCta.tsx:17
+#: src/features/landing/FinalCta.tsx
 msgid "Registration opens in the next stage"
 msgstr "Registration opens in the next stage"
 
-#: src/features/contacts/ContactItem.tsx:95
-#: src/features/contacts/RemoveConfirm.tsx:53
+#: src/features/contacts/ContactItem.tsx
+#: src/features/contacts/RemoveConfirm.tsx
 msgid "Remove"
 msgstr "Remove"
 
-#: src/features/contacts/ContactItem.tsx:90
+#: src/features/contacts/ContactItem.tsx
 msgid "Remove {name}"
 msgstr "Remove {name}"
 
-#: src/features/contacts/RemoveConfirm.tsx:42
+#: src/features/contacts/RemoveConfirm.tsx
 msgid "Remove {name}? You won’t be able to check each other until you pair again in person."
 msgstr "Remove {name}? You won’t be able to check each other until you pair again in person."
 
-#: src/features/contacts/ContactItem.tsx:84
+#: src/features/contacts/ContactItem.tsx
 msgid "Rename"
 msgstr "Rename"
 
-#: src/features/contacts/ContactItem.tsx:79
+#: src/features/contacts/ContactItem.tsx
 msgid "Rename {name}"
 msgstr "Rename {name}"
 
-#: src/features/landing/HowItWorks.tsx:76
+#: src/features/landing/HowItWorks.tsx
 msgid "Same code — it’s them. Different code or excuses — hang up and call back on the number you already know."
 msgstr "Same code — it’s them. Different code or excuses — hang up and call back on the number you already know."
 
-#: src/features/landing/TryIt.tsx:72
+#: src/features/landing/TryIt.tsx
 msgid "Same voice. Different code."
 msgstr "Same voice. Different code."
 
-#: src/features/contacts/RenameForm.tsx:91
+#: src/features/contacts/RenameForm.tsx
 msgid "Save"
 msgstr "Save"
 
-#: src/features/pair/NameForm.tsx:77
+#: src/features/pair/NameForm.tsx
 msgid "Save both contacts"
 msgstr "Save both contacts"
 
-#: src/features/pair/FinishPairing.tsx:101
+#: src/features/pair/FinishPairing.tsx
 msgid "Save contact"
 msgstr "Save contact"
 
-#: src/features/pair/PairDemo.tsx:349
+#: src/features/pair/PairDemo.tsx
 msgid "Saved two demo contacts"
 msgstr "Saved two demo contacts"
 
-#: src/features/contacts/RenameForm.tsx:91
+#: src/features/contacts/RenameForm.tsx
 msgid "Saving…"
 msgstr "Saving…"
 
-#: src/features/landing/Hero.tsx:31
+#: src/features/landing/Hero.tsx
 msgid "Scammers need only a few seconds of audio to sound exactly like your son or mom. Hushbind gives every pair of people who trust each other a secret 6-digit code that changes every 30 seconds. Ask for it — and know who is really calling."
 msgstr "Scammers need only a few seconds of audio to sound exactly like your son or mom. Hushbind gives every pair of people who trust each other a secret 6-digit code that changes every 30 seconds. Ask for it — and know who is really calling."
 
-#: src/features/landing/HowItWorks.tsx:40
+#: src/features/landing/HowItWorks.tsx
 msgid "Scan each other’s QR code in person, or pair remotely and confirm a short check number by voice. Your phones agree on a secret that never travels over the internet."
 msgstr "Scan each other’s QR code in person, or pair remotely and confirm a short check number by voice. Your phones agree on a secret that never travels over the internet."
 
-#: src/features/landing/WhyItWorks.tsx:46
+#: src/features/pair/MessageIn.tsx
+msgid "Scan QR code"
+msgstr "Scan QR code"
+
+#: src/features/landing/WhyItWorks.tsx
 msgid "Security questions leak through social media. A random secret can’t be guessed from your photos."
 msgstr "Security questions leak through social media. A random secret can’t be guessed from your photos."
 
-#: src/features/pair/RemotePairing.tsx:274
+#: src/features/pair/RemotePairing.tsx
 msgid "Send them this last message"
 msgstr "Send them this last message"
 
-#: src/features/pair/PairDemo.tsx:196
+#: src/features/pair/PairDemo.tsx
 msgid "Send to phone A"
 msgstr "Send to phone A"
 
-#: src/features/pair/PairDemo.tsx:173
-#: src/features/pair/PairDemo.tsx:223
+#: src/features/pair/PairDemo.tsx
 msgid "Send to phone B"
 msgstr "Send to phone B"
 
-#: src/features/pair/RemotePairing.tsx:239
+#: src/features/pair/RemotePairing.tsx
 msgid "Send your invite"
 msgstr "Send your invite"
 
-#: src/features/pair/RemotePairing.tsx:257
+#: src/features/pair/RemotePairing.tsx
 msgid "Send your reply"
 msgstr "Send your reply"
 
-#: src/features/pair/RemotePairing.tsx:241
+#: src/features/pair/RemotePairing.tsx
 msgid "Show or send this to the person you’re pairing with. It works once, for 10 minutes."
 msgstr "Show or send this to the person you’re pairing with. It works once, for 10 minutes."
 
-#: src/features/landing/Privacy.tsx:42
+#: src/features/landing/Privacy.tsx
 msgid "Sign in with Face ID, Touch ID or your device PIN through passkeys."
 msgstr "Sign in with Face ID, Touch ID or your device PIN through passkeys."
 
-#: src/layout/SiteHeader.tsx:27
+#: src/layout/SiteHeader.tsx
 msgid "Skip to content"
 msgstr "Skip to content"
 
-#: src/components/Carousel/Carousel.tsx:166
+#: src/components/Carousel/Carousel.tsx
 msgid "slide"
 msgstr "slide"
 
 #. placeholder {0}: String(i + 1)
 #. placeholder {1}: slide.title
-#: src/components/Carousel/Carousel.tsx:108
+#: src/components/Carousel/Carousel.tsx
 msgid "Slide {0}: {1}"
 msgstr "Slide {0}: {1}"
 
-#: src/features/landing/HowItWorks.tsx:63
+#: src/features/landing/HowItWorks.tsx
 msgid "Something feels off? Ask"
 msgstr "Something feels off? Ask"
 
-#: src/features/pair/PairDemo.tsx:338
+#: src/features/pair/PairDemo.tsx
 msgid "Something went wrong, and nothing was saved."
 msgstr "Something went wrong, and nothing was saved."
 
-#: src/layout/SiteFooter.tsx:16
+#: src/layout/SiteFooter.tsx
 msgid "Source code"
 msgstr "Source code"
 
-#: src/features/pair/PairDemo.tsx:136
-#: src/features/pair/PairPage.tsx:15
+#: src/features/pair/PairDemo.tsx
+#: src/features/pair/PairPage.tsx
 msgid "Start"
 msgstr "Start"
 
-#: src/features/pair/PairDemo.tsx:327
-#: src/features/pair/PairDemo.tsx:341
-#: src/features/pair/RemotePairing.tsx:228
+#: src/features/pair/PairDemo.tsx
+#: src/features/pair/RemotePairing.tsx
 msgid "Start again"
 msgstr "Start again"
 
-#: src/components/Carousel/Carousel.tsx:94
+#: src/components/Carousel/Carousel.tsx
 msgid "Start automatic slide show"
 msgstr "Start automatic slide show"
 
-#: src/features/pair/PairPage.tsx:21
-#: src/features/pair/PairPage.tsx:55
+#: src/features/pair/PairPage.tsx
 msgid "Start pairing"
 msgstr "Start pairing"
 
-#: src/features/pair/PairDemo.tsx:144
+#: src/features/pair/PairDemo.tsx
 msgid "Step {step} of 4"
 msgstr "Step {step} of 4"
 
-#: src/features/pair/PairDemo.tsx:106
+#: src/features/pair/PairDemo.tsx
 msgid "Step {step} of 4."
 msgstr "Step {step} of 4."
 
-#: src/components/Carousel/Carousel.tsx:94
+#: src/components/Carousel/Carousel.tsx
 msgid "Stop automatic slide show"
 msgstr "Stop automatic slide show"
 
-#: src/features/pair/RemotePairing.tsx:88
+#: src/features/pair/RemotePairing.tsx
 msgid "That doesn’t look like a Hushbind pairing message. Copy all of it and try again."
 msgstr "That doesn’t look like a Hushbind pairing message. Copy all of it and try again."
 
-#: src/features/landing/TryIt.tsx:33
+#: src/features/landing/TryIt.tsx
 msgid "The caller says"
 msgstr "The caller says"
 
-#: src/features/check/CallerCheck.tsx:83
+#: src/components/QrScanner/QrScanner.tsx
+msgid "The camera didn’t start. Paste the text instead."
+msgstr "The camera didn’t start. Paste the text instead."
+
+#: src/features/check/CallerCheck.tsx
 msgid "The code came from {name}’s phone. If anything still feels wrong, hang up and call {name} back yourself."
 msgstr "The code came from {name}’s phone. If anything still feels wrong, hang up and call {name} back yourself."
 
-#: src/features/pair/RemotePairing.tsx:90
+#: src/features/pair/RemotePairing.tsx
 msgid "The message looks cut off. Copy all of it and try again."
 msgstr "The message looks cut off. Copy all of it and try again."
 
-#: src/features/pair/PairPage.tsx:29
+#: src/features/pair/PairPage.tsx
 msgid "The other person started and has an invite for you."
 msgstr "The other person started and has an invite for you."
 
-#: src/features/pair/RemotePairing.tsx:224
+#: src/features/pair/RemotePairing.tsx
 msgid "The pairing message was broken. Nothing was saved. Start again."
 msgstr "The pairing message was broken. Nothing was saved. Start again."
 
-#: src/features/pair/RemotePairing.tsx:166
+#: src/features/pair/RemotePairing.tsx
 msgid "Their invite"
 msgstr "Their invite"
 
-#: src/features/pair/RemotePairing.tsx:218
+#: src/features/pair/RemotePairing.tsx
 msgid "Their key changed during pairing. Someone may be in the middle. Nothing was saved — pair again side by side."
 msgstr "Their key changed during pairing. Someone may be in the middle. Nothing was saved — pair again side by side."
 
-#: src/features/pair/RemotePairing.tsx:261
+#: src/features/pair/RemotePairing.tsx
 msgid "Their last message"
 msgstr "Their last message"
 
-#: src/features/pair/RemotePairing.tsx:248
+#: src/features/pair/RemotePairing.tsx
 msgid "Their reply"
 msgstr "Their reply"
 
-#: src/features/landing/TryIt.tsx:74
+#: src/features/landing/TryIt.tsx
 msgid "These codes are computed live in your browser, exactly like the app will. Switch the scenario and watch them change every 30 seconds."
 msgstr "These codes are computed live in your browser, exactly like the app will. Switch the scenario and watch them change every 30 seconds."
 
-#: src/features/pair/FinishPairing.tsx:37
-#: src/features/pair/PairDemo.tsx:289
+#: src/features/pair/FinishPairing.tsx
+#: src/features/pair/PairDemo.tsx
 msgid "They don’t match"
 msgstr "They don’t match"
 
-#: src/features/pair/PairDemo.tsx:281
+#: src/features/pair/PairDemo.tsx
 msgid "They match"
 msgstr "They match"
 
-#: src/features/not-found/NotFoundPage.tsx:12
+#: src/features/not-found/NotFoundPage.tsx
 msgid "This address doesn’t lead anywhere. The link may be old or mistyped."
 msgstr "This address doesn’t lead anywhere. The link may be old or mistyped."
 
-#: src/features/pairs/MissingContact.tsx:8
+#: src/components/QrScanner/QrScanner.tsx
+msgid "This browser can’t use the camera here. Paste the text instead."
+msgstr "This browser can’t use the camera here. Paste the text instead."
+
+#: src/features/pairs/MissingContact.tsx
 msgid "This contact isn’t on this device. It may have been removed, or the link came from another phone."
 msgstr "This contact isn’t on this device. It may have been removed, or the link came from another phone."
 
-#: src/features/check/CallerCheck.tsx:105
+#: src/features/check/CallerCheck.tsx
 msgid "This is probably not {name}"
 msgstr "This is probably not {name}"
 
-#: src/features/pair/RemotePairing.tsx:96
+#: src/features/pair/RemotePairing.tsx
 msgid "This message belongs to a different pairing. Ask for the reply to your invite."
 msgstr "This message belongs to a different pairing. Ask for the reply to your invite."
 
-#: src/features/pair/RemotePairing.tsx:94
+#: src/features/pair/RemotePairing.tsx
 msgid "This message is for a different step. Paste their newest message."
 msgstr "This message is for a different step. Paste their newest message."
 
-#: src/features/pair/RemotePairing.tsx:92
+#: src/features/pair/RemotePairing.tsx
 msgid "This message is from another version of Hushbind. Update the app on both phones."
 msgstr "This message is from another version of Hushbind. Update the app on both phones."
 
-#: src/features/pair/RemotePairing.tsx:215
+#: src/features/pair/RemotePairing.tsx
 msgid "This pairing took more than 10 minutes. Nothing was saved. Start again."
 msgstr "This pairing took more than 10 minutes. Nothing was saved. Start again."
 
-#: src/layout/FramedNotice.tsx:30
+#: src/layout/FramedNotice.tsx
 msgid "To keep your codes safe, Hushbind only works in its own tab."
 msgstr "To keep your codes safe, Hushbind only works in its own tab."
 
-#: src/features/pairs/VaultBoundary.tsx:36
+#: src/features/pairs/VaultBoundary.tsx
 msgid "Try again"
 msgstr "Try again"
 
-#: src/features/landing/TryIt.tsx:71
-#: src/features/pair/PairPage.tsx:37
+#: src/features/landing/TryIt.tsx
+#: src/features/pair/PairPage.tsx
 msgid "Try it"
 msgstr "Try it"
 
-#: src/features/pair/PairPage.tsx:43
+#: src/features/pair/PairPage.tsx
 msgid "Try on this device"
 msgstr "Try on this device"
 
-#: src/features/pair/PairPage.tsx:57
+#: src/features/pair/PairPage.tsx
 msgid "Try pairing"
 msgstr "Try pairing"
 
-#: src/features/landing/Hero.tsx:39
-#: src/layout/SiteHeader.tsx:46
+#: src/features/landing/Hero.tsx
+#: src/layout/SiteHeader.tsx
 msgid "Try the demo"
 msgstr "Try the demo"
 
-#: src/features/landing/FinalCta.tsx:30
+#: src/features/landing/FinalCta.tsx
 msgid "Try the demo again"
 msgstr "Try the demo again"
 
 #. placeholder {0}: view.nameOnA
 #. placeholder {1}: view.nameOnB
-#: src/features/pair/PairDemo.tsx:352
+#: src/features/pair/PairDemo.tsx
 msgid "Try them: open “My code” on “{0}” — that is what phone A reads out. Then open “Check caller” on “{1}” and type it in."
 msgstr "Try them: open “My code” on “{0}” — that is what phone A reads out. Then open “Check caller” on “{1}” and type it in."
 
-#: src/features/check/CallerCheck.tsx:125
+#: src/features/check/CallerCheck.tsx
 msgid "Type the 6 digits you hear."
 msgstr "Type the 6 digits you hear."
 
-#: src/features/landing/WhyItWorks.tsx:27
+#: src/features/landing/WhyItWorks.tsx
 msgid "Unlike a fixed family password, a leaked code expires before anyone can reuse it."
 msgstr "Unlike a fixed family password, a leaked code expires before anyone can reuse it."
 
-#: src/features/landing/HowItWorks.tsx:64
+#: src/features/landing/HowItWorks.tsx
 msgid "Urgent money, secrecy, a new number — classic scam signs. Ask the caller: “What’s our code?” A real relative opens the app and reads it."
 msgstr "Urgent money, secrecy, a new number — classic scam signs. Ask the caller: “What’s our code?” A real relative opens the app and reads it."
 
-#: src/features/pair/NameForm.tsx:36
+#: src/features/pair/NameForm.tsx
 msgid "Use 1 to {MAX_NAME_LENGTH} characters for each name."
 msgstr "Use 1 to {MAX_NAME_LENGTH} characters for each name."
 
-#: src/features/contacts/RenameForm.tsx:54
-#: src/features/pair/FinishPairing.tsx:72
+#: src/features/contacts/RenameForm.tsx
+#: src/features/pair/FinishPairing.tsx
 msgid "Use 1 to {MAX_NAME_LENGTH} characters."
 msgstr "Use 1 to {MAX_NAME_LENGTH} characters."
 
-#: src/features/landing/TryIt.tsx:85
+#: src/features/landing/TryIt.tsx
 msgid "Voice-clone scam"
 msgstr "Voice-clone scam"
 
-#: src/features/pair/PairDemo.tsx:177
-#: src/features/pair/PairDemo.tsx:227
+#: src/features/pair/PairDemo.tsx
 msgid "Waiting for phone A."
 msgstr "Waiting for phone A."
 
-#: src/features/pair/PairDemo.tsx:183
+#: src/features/pair/PairDemo.tsx
 msgid "Waiting for phone B."
 msgstr "Waiting for phone B."
 
-#: src/features/pair/PairDemo.tsx:112
+#: src/features/pair/PairDemo.tsx
 msgid "Watch two phones pair, step by step, on this screen. You end up with two linked demo contacts to try “My code” and “Check caller”."
 msgstr "Watch two phones pair, step by step, on this screen. You end up with two linked demo contacts to try “My code” and “Check caller”."
 
-#: src/features/landing/Privacy.tsx:28
+#: src/features/landing/Privacy.tsx
 msgid "We can’t leak what we never have"
 msgstr "We can’t leak what we never have"
 
-#: src/features/landing/WhyItWorks.tsx:14
-#: src/layout/SiteHeader.tsx:39
+#: src/features/landing/WhyItWorks.tsx
+#: src/layout/SiteHeader.tsx
 msgid "Why it works"
 msgstr "Why it works"
 
 #. placeholder {0}: view.attemptsLeft
-#: src/features/check/CallerCheck.tsx:127
+#: src/features/check/CallerCheck.tsx
 msgid "Wrong code. {0, plural, one {# try left.} other {# tries left.}} Ask {name} to read it again, slowly."
 msgstr "Wrong code. {0, plural, one {# try left.} other {# tries left.}} Ask {name} to read it again, slowly."
 
-#: src/features/landing/WhyItWorks.tsx:36
+#: src/features/landing/WhyItWorks.tsx
 msgid "You and Mom share one code, you and your brother another. One lost phone exposes one pair, not the whole family."
 msgstr "You and Mom share one code, you and your brother another. One lost phone exposes one pair, not the whole family."
 
-#: src/features/pair/PairPage.tsx:18
+#: src/features/pair/PairPage.tsx
 msgid "You show an invite. Best side by side; a message works too."
 msgstr "You show an invite. Best side by side; a message works too."
 
-#: src/features/pair/FinishPairing.tsx:22
+#: src/features/pair/FinishPairing.tsx
 msgid "Your check number"
 msgstr "Your check number"
 
-#: src/features/prove/ProvePage.tsx:66
+#: src/features/prove/ProvePage.tsx
 msgid "Your code"
 msgstr "Your code"
 
-#: src/features/prove/ProvePage.tsx:33
+#: src/features/prove/ProvePage.tsx
 msgid "Your code for {name}"
 msgstr "Your code for {name}"
 
-#: src/features/landing/Hero.tsx:52
+#: src/features/landing/Hero.tsx
 msgid "Your code for Mom"
 msgstr "Your code for Mom"
 
-#: src/features/pair/RemotePairing.tsx:245
+#: src/features/pair/RemotePairing.tsx
 msgid "Your invite"
 msgstr "Your invite"
 
-#: src/features/landing/Hero.tsx:50
+#: src/features/landing/Hero.tsx
 msgid "Your phone"
 msgstr "Your phone"
 
-#: src/features/pair/RemotePairing.tsx:258
+#: src/features/pair/RemotePairing.tsx
 msgid "Your reply"
 msgstr "Your reply"
 
-#: src/features/landing/TryIt.tsx:45
+#: src/features/landing/TryIt.tsx
 msgid "Your screen"
 msgstr "Your screen"

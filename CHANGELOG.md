@@ -32,6 +32,10 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follo
 - Frame guard: the app does not render inside another page’s frame (T17).
 - Pairing messages also shown as QR codes (`QrCode` component on lean-qr, drawn as one SVG path,
   always dark on light); the screen stays on while a message is shown.
+- Scan pairing QR codes with the camera (`QrScanner`): native `BarcodeDetector` where available,
+  otherwise jsQR loaded on demand; only `HB1.…` codes are accepted; the camera always turns off.
+- CI checks the translation catalog is up to date (`npm run i18n:check`); catalog without line
+  numbers.
 - Stage 0 project: Vite 8, React 19 with React Compiler, TypeScript strict, Lingui, CSS Modules
   with dark and light design tokens.
 - Landing page: hero with live codes, call-scenario demo (tabs), “How it works” carousel,
