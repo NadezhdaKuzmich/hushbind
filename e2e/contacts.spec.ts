@@ -15,7 +15,7 @@ test.describe('contacts', () => {
   test('pair on this device, then a code from one contact checks out on the other', async ({
     page,
   }) => {
-    await page.goto('/#/app/pair')
+    await page.goto('/#/app/pair/demo')
     await page.getByRole('button', { name: 'Start' }).click()
     await page.getByRole('button', { name: 'Send to phone B' }).click()
     await page.getByRole('button', { name: 'Send to phone A' }).click()
@@ -40,7 +40,7 @@ test.describe('contacts', () => {
   })
 
   test('an attacker in the middle shows up as different check numbers', async ({ page }) => {
-    await page.goto('/#/app/pair')
+    await page.goto('/#/app/pair/demo')
     await page.getByRole('checkbox', { name: 'Put an attacker in the middle' }).check()
     await page.getByRole('button', { name: 'Start' }).click()
     await page.getByRole('button', { name: 'Send to phone B' }).click()

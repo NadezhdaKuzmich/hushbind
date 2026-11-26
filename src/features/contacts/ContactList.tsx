@@ -26,8 +26,8 @@ export function ContactList() {
       {pairs.length === 0 ? (
         <p className={styles.empty}>
           <Trans>
-            No contacts yet. Try pairing on this device to see how it works; pairing two phones
-            arrives soon.
+            No contacts yet. Pair with someone you trust — best side by side — or try it on this
+            device first.
           </Trans>
         </p>
       ) : (

@@ -18,8 +18,8 @@ export function ContactsPage() {
         </Trans>
       }
     >
-      <ButtonLink href={toHref({ name: 'pair' })}>
-        <Trans>Try pairing</Trans>
+      <ButtonLink href={toHref({ name: 'pair', mode: 'choose' })}>
+        <Trans>Pair with someone</Trans>
       </ButtonLink>
       <VaultBoundary>
         <ContactList />

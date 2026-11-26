@@ -9,6 +9,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { App } from './App'
 import { activateLocale, detectLocale } from './i18n/locale'
+import { FramedNotice, isFramed } from './layout/FramedNotice'
 
 const LOCALE_STORAGE_KEY = 'hushbind:locale'
 
@@ -30,7 +31,8 @@ async function start(): Promise<void> {
 
   createRoot(root).render(
     <StrictMode>
-      <App />
+      {/* Inside someone else's page: no app at all, so nothing to click-jack */}
+      {isFramed() ? <FramedNotice /> : <App />}
     </StrictMode>,
   )
 }

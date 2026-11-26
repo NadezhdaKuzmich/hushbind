@@ -122,7 +122,10 @@ describe('ContactsPage', () => {
     await renderContacts()
     // Wait for the list too: a load still running would finish inside the next test
     await screen.findByText(/No contacts yet/)
-    expect(screen.getByRole('link', { name: 'Try pairing' })).toHaveAttribute('href', '#/app/pair')
+    expect(screen.getByRole('link', { name: 'Pair with someone' })).toHaveAttribute(
+      'href',
+      '#/app/pair',
+    )
   })
 
   it('has no accessibility violations', async () => {

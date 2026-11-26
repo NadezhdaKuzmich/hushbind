@@ -6,13 +6,15 @@ export type Route =
   /** Marketing page. `anchor` is an in-page section like `how`, or null. */
   | { name: 'landing'; anchor: string | null }
   | { name: 'contacts' }
-  /** Pair with someone (for now: the on-device demo). */
-  | { name: 'pair' }
+  /** Pair with someone: choose, start (show invite), join (got invite) or the on-device demo. */
+  | { name: 'pair'; mode: PairMode }
   /** My code for one contact. `pairId` is the random id from the vault. */
   | { name: 'prove'; pairId: string }
   /** Check a caller who claims to be this contact. */
   | { name: 'check'; pairId: string }
   | { name: 'notFound'; path: string }
+
+export type PairMode = 'choose' | 'start' | 'join' | 'demo'
 
 /** App routes start with `#/`. Anything else (`#how`, `#main`) is a landing anchor. */
 const ROUTE_PREFIX = '#/'
@@ -38,7 +40,13 @@ export function parseRoute(hash: string): Route {
     case '/app':
       return { name: 'contacts' }
     case '/app/pair':
-      return { name: 'pair' }
+      return { name: 'pair', mode: 'choose' }
+    case '/app/pair/start':
+      return { name: 'pair', mode: 'start' }
+    case '/app/pair/join':
+      return { name: 'pair', mode: 'join' }
+    case '/app/pair/demo':
+      return { name: 'pair', mode: 'demo' }
   }
 
   // Routes with a parameter: /app/c/<pairId>/prove|check
@@ -58,7 +66,7 @@ export function toHref(route: Route): string {
     case 'contacts':
       return '#/app'
     case 'pair':
-      return '#/app/pair'
+      return route.mode === 'choose' ? '#/app/pair' : `#/app/pair/${route.mode}`
     case 'prove':
       return `#/app/c/${route.pairId}/prove`
     case 'check':

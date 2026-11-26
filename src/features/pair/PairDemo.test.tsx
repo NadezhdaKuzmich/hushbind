@@ -13,7 +13,7 @@ function renderPair() {
   const store = createPairsStore(openFreshVault)
   const result = render(
     <PairsProvider store={store}>
-      <PairPage />
+      <PairPage mode="demo" />
     </PairsProvider>,
   )
   return { store, ...result }
